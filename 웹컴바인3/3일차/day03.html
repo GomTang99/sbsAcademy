@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 03</title>
+</head>
+<body>
+
+        <h2>
+            //논리형 (불대수)
+            // AND, OR, NOT
+            // 울산은 광역시이다.
+            // 10보다 4는 작다.
+
+            // ||(OR), &&(AND), !(NOT)
+
+            OR 또는
+            인수중에 하나라도 TRUE이면 TRUE를반환하고, 그렇지 않으면 FALSE를 반환
+
+            AND 그리고
+            두 피연산자가 모두가 참 일때 TRUE를 반환합니다. 그외 경우는 FALSE를 반환합니다
+
+            NOT
+
+        </h2>
+        ----------------------------------------------------------------------------------
+
+
+    <button>클릭해주세요</button>
+
+    <!-- 스크립트의 위치는 실행순서가 달라질 수 있기때문에 가장좋은위치는 body의 닫힘태그 위에 올라온다. -->
+    <script>
+
+        // var button = document.querySelector('button');
+
+        // button.onclick = function(){
+        //     var name = prompt('너의 이름이 뭐니?');
+            
+        //     //알림창
+        //     alert('안녕 ' + name + ', 만나서 반가워');
+        // };     
+
+        //------------------------------------------------------------------
+
+        // 숫자를 문자로 바꿔서 표현
+
+        // var myNum = 1234;
+        // var myString = myNum.toString();
+
+        // 문자를 숫자로 바꿔서 표현
+
+        // var myString = '123';
+        // var myNum = Number.myString;
+
+        //------------------------------------------------------------------
+
+        // let name = '아이유';
+        // let year = 1993;
+        // let month = 5;
+        // let day = 16;
+
+        // console.log(name + '의' + ' 생일은 ' + year + '년' + month + '월' + day + '일 입니다.');
+        
+        //------------------------------------------------------------------
+
+        // 백틱 = `  => 변수를 담아서 사용할때 쓰는것이 좋다
+        // console.log(`아이유의 생일은 1993년 5월 16일입니다`);
+
+        //${}
+        // console.log(`${name}아이유의 생일은 ${year}년 ${month}월 ${day}일 입니다.`)
+
+        //------------------------------------------------------------------
+
+        // 실습
+        // 파라미터로 이름(name), 근무시간(time), 시급(wage) 전달 받아서 
+        // 총 급여를 계산하기 위해 total 변수에 시간과 시급을 곱해서 담아내서 출력
+
+        // calcWage('지수', 208, 11340);
+        // calcWage('제니', 180, 12000);
+        // calcWage('로제', 160, 13000);
+        // calcWage('리사', 230, 10900);
+
+        // --파라미터로 함수 호출하는 구문--
+        // function calcWage(name, time, wage){
+        //     let total = time * wage;
+
+        //     console.log(`${name}님의 근무시간은 총 ${time}시간이며, 최종급여는 ${total}원 입니다.`);
+        // }
+        
+        //------------------------------------------------------------------
+
+        // 변수들끼리 연산하여 result1에는 문자열 '34', result2는 숫자형 34를 만들어 출력.
+
+        // var materail1 = 3;
+        // var materail2 = '3';
+        // var materail3 = 10;
+        // var materail4 = '4';
+        // var materail5 = 4;
+
+        // var result1 = materail2 + materail4;
+        // result1;
+        // typeof result1;
+
+        // var result2 = (materail1 * materail3) + materail5;
+        // result2;
+        // typeof result2;
+
+        //------------------------------------------------------------------
+
+        // console.log()함수와, 문자열 개념을 이용해서 두 문장을 만드세요.
+        // 언어의 장벽을 깬 '오징어 게임' 에미상을 수상 인간의 한탕주의와 정의란 무엇인가 다뤄.
+        // 아리스토렐레스는 "인간은 사회적 동물이다."라고 말했다.
+
+        //console.log("언어의 장벽을 깬 '오징어 게임' 에미상을 수상 인간의 한탕주의와 정의란 무엇인가 다뤄.");
+
+        //console.log('아리스토렐레스는 "인간은 사회적 동물이다."라고 말했다.');
+
+        //------------------------------------------------------------------
+
+
+        
+    </script>
+    
+</body>
+</html>

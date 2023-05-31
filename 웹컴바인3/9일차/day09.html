@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 09</title>
+</head>
+<body>
+
+    <h2>
+
+    </h2>
+    
+
+    <script>
+
+        //------------------------------------------------------------------
+
+        /*
+        let inputNumber = prompt("한자리 수를 입력하세요.");
+        if(inputNumber === '7') {
+            alert('행운입니다.');
+        } else if(inputNumber === '0') {
+            alert('제로');
+        } else if(inputNumber === '1') {
+            alert('원');
+        } else {
+            alert('불행하게도 값이 없습니다.');
+        }
+        */
+
+        //------------------------------------------------------------------
+
+        /*
+        var num = 6;
+        if (num % 2 === 0 && num % 3 === 0) {
+            console.log(num + '는 6의 배수입니다.');
+        } else {
+            console.log(num + '는 6의 배수가 아닙니다.');
+        }
+        */
+
+        //------------------------------------------------------------------
+
+        /*
+        function checkHei(height) {
+            const LIMIT = 140;
+            let passMessage = '탑승가능';
+            let failMessage = '탑승 불가능';
+
+            if(height >= LIMIT){
+                console.log(passMessage);
+            } else {
+                console.log(failMessage);
+            }
+        }
+
+        checkHei(140);
+        checkHei(130);
+        checkHei(180);
+        */
+
+        //------------------------------------------------------------------
+
+        // 50점 만점의 중간고사와 50점 만점의 기말고사
+        // 두 시험의 점수를 합산해서 최종성적을 구하는 프로그램을 작성
+        // A : 90점이상
+        // B : 80점이상 90점 미만
+        // C : 70점이상 80점 미만
+        // D : 60점이상 70점 미만
+        // F : 60점 미만
+
+        
+/*
+        printGrad(25,30);
+        printGrad(55,45);
+        printGrad(29,50);
+        printGrad(39,43);
+*/
+
+        //------------------------------------------------------------------
+
+        // 중복 단어 제거
+        // let str = ["good", "time", "good", "time", "study"];
+        
+        /*
+        function distinctword(s) {
+            let ans;
+            //console.log(s.indexOf(""));
+            ans = s.filter(function (v,i) {
+                console.log(v, i);
+                return s.indexOf(v) === i;
+            });
+            return ans;
+        }
+
+        let str = ["good", "time", "good", "time", "study"];
+        console.log(distinctword(str));
+        */
+
+        //------------------------------------------------------------------
+
+        // kisskiss (중복문자제거)
+
+        /*
+        function distinctstr(s) {
+            let result = "";
+            for(let i = 0; i < s.length; i++) {
+                if(s.indexOf(s[i]) === i) {
+                    result += s[i];
+                }
+            }
+            return result;
+        }
+
+        let word = "kisskiss";
+        console.log(distinctstr(word));
+        */
+
+        // 강사님 풀이 (indexOf메소드 사용)
+
+        /*
+        function distinct(s) {
+            let ans = "";
+            //console.log(s.indexOf("k"));
+            for(let i = 0; i < s.length; i++) {
+                if(s.indexOf(s[i]) === i) {
+                    ans += s[i];
+                }
+            }
+            return ans;
+        }
+
+        console.log(distinct("kisskiss"));
+        */
+
+        //------------------------------------------------------------------
+
+        
+
+
+        
+
+
+
+
+    </script>
+</body>
+</html>

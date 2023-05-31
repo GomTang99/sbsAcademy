@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 13</title>
+</head>
+<body>
+    
+    <h2>
+
+    </h2>
+
+
+
+
+    <script>
+
+        //------------------------------------------------------------------
+
+        // 주어진 숫자보다 작거나 같은 모든 자연수의 합을 계산하는 프로그램 (while문)
+
+        // 1번 방식
+        /*
+        function calculateSum(num) {
+               let sum = 0;
+               let i = 0;
+               while (i <= num) {
+                sum = sum + i;
+                i++;
+               }
+               console.log(sum);
+        }
+
+        const number = 5;
+        console.log(calculateSum(number));
+        */
+
+
+        // 2번 방식
+        /*
+        function calculateSum(num) {
+            let sum = 0;
+            let i = 1;
+            while (i <= num) {
+                sum = sum + i;
+                i = i + 1;
+            }
+            console.log(sum);
+        }
+
+        const number = 5;
+        console.log(calculateSum(number));
+        */
+
+        // 강사님 풀이
+        /*
+        function calculateSum(num) {
+            let sum = 0;
+            let currentNum = 1;
+
+            while (currentNum <= num) {
+                sum += currentNum;
+                currentNum++;
+            }
+            return sum;
+        }
+
+        const number = 5;
+        console.log(calculateSum(number));
+        */
+
+
+        //------------------------------------------------------------------
+
+        // break문
+        /*
+        let i = 100;
+        while (true) {
+            if (i % 23 == 0) {
+                // 23의 배수이면 반복문을 종료
+                break;
+            }
+            i = i + 1;
+        }
+        console.log(i);
+        */
+        /*
+        for (let i = 1; i <= 10; i++) {
+            console.log(i);
+            if (i === 7) {
+                break;
+            }
+        }
+        */
+
+        //------------------------------------------------------------------
+
+        // continue문
+        // 현재 진행되고 있는 수행부분을 중단시키고 조건부분을 다시 확인하고 싶을떄 사용
+
+        /*
+        let i = 0;
+        while (i < 15) {
+            i = i + 1;
+            if (i % 2 == 1) {
+                continue;
+            }
+            console.log(i);
+        }
+        */
+        
+
+        //------------------------------------------------------------------
+
+        // js 로그인 구현
+        
+        // for문
+        /*
+        for (let i = 0; i < 5; i++) {
+            let id = window.prompt('아이디를 입력해주세요.');
+            let password = window.prompt('비밀번호를 입력해주세요.');
+            if (id === 'admin' && password === '1234') {
+                console.log('환영합니다. ' + id + '님');
+                break;
+            } else {
+            console.log('아이디 또는 비밀번호가 일치하지않습니다.');
+            }
+        }
+        */
+
+        // while문
+        /*
+        let login = false;
+        while (!login) {
+            let id = window.prompt('아이디를 입력해주세요.');
+            let password = window.prompt('비밀번호를 입력해주세요.');
+            if (id === 'admin' && password === '1234') {
+                console.log('환영합니다. ' + id + '님');
+                login = true;
+            } else {
+            console.log('아이디 또는 비밀번호가 일치하지않습니다.');
+            }
+        }
+        */
+
+        //------------------------------------------------------------------
+
+        // for문과 while문을 이용해서 구구단 출력하는 프로그램
+
+        // for문
+        /*
+        for (let i = 2; i <= 9; i++) {
+            console.log(`${i}단 출력`);
+            for (let j = 1; j <= 9; j++) {
+                console.log(`${j} x ${i} = ${j * i}`);
+            }
+        }
+        */
+
+
+        // 피보나치 수열
+        
+        function fibonacci(n) {
+
+            let last1 = 1;
+            let last2 = 1;
+            let result = 0;
+
+            for (let i = 1; i < n; i++) {
+                result = last1 + last2;
+                console.log(`${last1} + ${last2} = ${result}`);
+                
+                last1 = last2;
+                last2 = result;
+                // console.log(`${last1} + ${last2} = ${last1}`);
+
+            }
+            return result;
+        }
+
+        console.log(fibonacci(10));
+
+
+
+        
+        
+
+
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex-item</title>
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container{
+            width: 500px;
+            background-color: lightblue;
+            margin: 100px auto;
+            padding: 5px;
+            display: flex;
+        }
+
+        .item{
+            border: 1px solid black;
+            border-radius: 5px;
+            /* flex-basis: 100px; */
+            width: 300px;
+            flex-shrink: 0;
+        }
+
+        /* .item:first-child{
+            flex-grow: 1;
+        }
+
+        .item:last-child{
+            flex-grow: 3;
+        } */
+
+    </style>
+
+</head>
+<body>
+    
+    <div class="container">
+
+        <div class="item">1</div>
+        <div class="item">22222222</div>
+        <div class="item">333</div>
+
+    </div>
+
+    <!-- 
+
+        flex-basis
+        => flex-item의 기본 크기 설정
+        flex-direction : row / width
+        flex-direction : column / height
+
+        flex-grow 
+        => flex-basis보다 값이 커질 수 있는지 결정하는 속성
+        => 사용단위 : 숫자
+        => 0보다 큰 값을 넣으면 flex-basis보다 커지고 빈 공간 메움
+
+        flex-shrink
+        => flex-basis보다 값이 작아질 수 있는지 결정하는 속성
+        => 사용단위 : 숫자
+        => 기본값 / flex-shrink : 1;
+        => 0보다 큰 값을 넣으면 유연한 박스로 변함
+        => 기존의 크기를 유지하되 부모안에서 한 줄로 정렬하고 싶을때는 flex-shrink : 0 넣어주기!
+
+        
+
+     -->
+
+
+
+</body>
+</html>

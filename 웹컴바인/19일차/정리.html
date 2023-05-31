@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>정리</title>
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: green;
+            display: inline-block;
+        }
+
+        .box:nth-child(2){
+            background-color: salmon;
+        }
+
+
+
+        .container{
+            width: 100%;
+            height: 500px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .item{
+            width: 100px;
+            height: 100px;
+            background-color: lightgray;
+        }
+
+
+
+        .test{
+            width: 100%;
+            height: 800px;
+            background-color: teal;
+        }
+
+        .test > img{
+            display: block;
+            width: 100%;
+        }
+
+        .bg{
+            width: 100%;
+            padding: 500px;
+            background: url(../9일차/img/cat.jpg) no-repeat center / cover;
+        }
+
+
+    </style>
+
+</head>
+<body>
+
+    <div class="box"></div>
+    <div class="box"></div>
+
+
+    <div class="container">
+        <span class="item">1</span>
+        <span class="item">2</span>
+        <span class="item">3</span>
+    </div>
+
+    <div class="test">
+        <img src="../9일차/img/cat.jpg" alt="">
+    </div>
+
+    <div class="bg"></div>
+
+    <iframe width="591" height="332" src="https://www.youtube.com/embed/_bEK-vqluj0" title="하필 고3때 외계인 쳐들어와ㅠ 전교생이 &quot;군필 고딩&quot;이 됨ㅋ 열받은 배그의 민족 방과후 육군훈련으로 점점 특수부대급🔥으로 성장하는 개쩌는 설정의 드라마 나왔다ㅋㅋ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    
+
+
+    <!-- 
+
+        [글자 관련 태그]
+
+        - 제목
+        => h1 ~ h6
+        => h1의 글자가 가장 크고 h6의 글자가 가장 작음
+        => h1 : logo를 담아줄때 주로 사용
+
+        - 문단태그
+        => p태그
+        => 자동 줄바꿈 안됨
+        => <br/> = break <br>
+
+
+        ====> block
+
+        
+        - span
+        => 부분적으로 꾸밈요소 적용
+        => 줄바꿈 없이 요소를 정렬하고 싶을때
+        => width, height, margin 적용 xxx
+
+        - i / em
+        => 글자 기울임
+
+        - strong / b
+        => strong >>> b
+
+        - mark
+
+        - small
+
+        ====> inline
+
+
+        ----------------------------------------------------------------------
+
+        
+        [display / 태그의 성질, 요소]
+
+        - block
+        ==> 여백O
+        ==> width, height, padding, margin 모두 적용 가능
+        ==> 줄바꿈 되는것 처럼 보임
+
+        - inline
+        ==> 여백값 X, 줄바꿈 X
+        ==> width, hegiht, margin 적용 불가 X
+
+        - inline-block
+        ==> 한 줄로 정렬 되면서 width, height, margin, padding 적용 
+
+        - flex
+        ==> display : flex;
+        ==> flex-container : 부모태그
+        ==> flex-item : 자식태그
+        ==> width 확인!!
+        ==> flex-item들이 container를 벗어나지 않으려는 특징 O
+        ==> flex-item들은 부모의 영향을 받아서 display가 변경 될 수 있음
+        ==> justify-contents 안되는 경우 width 확인
+        ==> align-items 안되는 경우 height 확인
+
+
+        - none vs opacity : 0
+        ==> display : none / html 문서 내에서 아예 없는 취급
+        ==> opacity : 0 / 형체는 있지만 눈에 안보임
+
+
+        -------------------------------------------------------------------------------
+
+        
+        [이미지 관련]
+
+        - img tag
+        ==> inline 요소
+        ==> 종횡비 유지
+
+
+        - background-image
+        ==> 잘려도 괜찮은 큰 이미지
+        ==> 필수조건 : height or padding
+
+
+        -------------------------------------------------------------------------------
+
+        
+        [동영상 관련]
+        
+        1. iframe
+        2. video, source
+
+        <video autoplay muted loop>
+            <source src="비디오주소.mp4" />
+        </video>
+
+
+        -------------------------------------------------------------------------------
+
+        
+        [변화, 변형 속성]
+
+        transition
+        ==> transition : all 1s;
+        ==> 반드시 변화가 일어나는 원본태그에 넣기!
+
+        transform
+        ==> 변형
+        ==> translate, scale, rotate
+        ==> scale(x,y)
+        ==> translate(x,y)
+        ==> rotate(00deg)
+
+        position 중앙 맞춤
+        position : absolute;
+        top : 50%;
+        left : 50%
+        
+        - 명확한 width, height를 알고 있는 경우
+        margin-left : -(width/2)px;
+        margin-top : -(height/2)px;
+
+        - 크기값이 불분명한 경우 (권장)
+        transform : translate(-50%, -50%);
+        **추천**
+
+
+
+
+        
+
+     -->
+
+
+    
+</body>
+</html>

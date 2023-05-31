@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>overflow</title>
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* .box{
+            width: 200px;
+            height: 200px;
+            border: 10px solid black;
+        }
+
+        .box:hover{
+            overflow: scroll; 
+            overflow: visible; 
+            overflow: hidden;
+        } */
+
+
+        .box{
+            width: 600px;
+            height: 500px;
+            border: 10px solid black;
+            overflow: hidden;
+            margin: 0 auto;
+        }
+
+        .box > img{
+            display: block;
+            width: 100%;
+            height: 100%;
+            transition-duration: .8s ;
+        }
+
+        .box:hover > img{
+            /* width: 120%;
+            height: 120%; */
+            transform: scale(1.5);
+        }
+
+
+    </style>
+
+</head>
+<body>
+    
+    <div class="box">
+        <img src="./img/cat.jpg" alt="고양이">
+    </div>
+
+
+    <!-- 
+
+        overflow
+        => 부모요소 밖을 넘치는 자식을 가려줄때 사용
+        => ** 반드시 부모 요소에 넣어주어야 함 **
+        => :hover 효과와 접목해서 사용
+
+        overflow: scroll;
+        => 부모밖으로 넘치는 자식을 가려주고, 스크롤이 생성되어 자식을 확인할 수 있음
+
+        overflow: visible;
+        => 부모바깥을 넘치는 자식을 그대로 보여줌
+
+        overflow: hidden;
+        => 부모바깥을 넘치는 자식 가려줌
+        => 클리핑 마스크와 비슷한 효과
+
+
+     -->
+
+
+
+
+</body>
+</html>

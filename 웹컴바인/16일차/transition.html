@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transition</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .box{
+            width: 300px;
+            height: 300px;
+            background-color: gold;
+            transition-duration: 0.5s;
+            /* 1s = 1000ms */
+            transition-property: all;
+        }
+
+        .box:hover{
+            width: 400px;
+            /* transition-duration: 0.5s; */
+            /* 안됨!! */
+            background-color: green;
+        }
+
+        .box_wrap > *{
+            width: 100px;
+            height: 50px;
+            background-color: teal;
+            color: #fff;
+            margin-bottom: 10px;
+            line-height: 50px;
+            transition-duration: 2s;
+        }
+
+
+        .box_wrap:hover > *{
+            width: 500px;
+        }
+
+        .t_box_1{
+            transition-timing-function: ease;
+            /* 기본값 / 느리게 시작 점점 빨라짐 느려지면서 종료 */
+        }
+
+        .t_box_2{
+            transition-timing-function: linear;
+            /* 시작부터 종료까지 일정한 속도 */
+        }
+
+        .t_box_3{
+            transition-timing-function: ease-in;
+            /* 느리게 시작, 종료까지 일정한 속도 */
+        }
+
+        .t_box_4{
+            transition-timing-function: ease-out;
+            /* 일정한 속도로 시작, 점점 느려지면서 종료 */
+        }
+
+        .t_box_5{
+            transition-timing-function: ease-in-out;
+            /* 느리게 시작, 느리게 종료 */
+        }
+
+        .t_box_6{
+            transition-timing-function: cubic-bezier(1,-0.17, 0, 1.31);
+            /* 커스터마이징 속성 => 핸들로 원하는 움직임 설정 */
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="box"></div>
+
+
+    <h2>가속도</h2>
+    <div class="box_wrap">
+        <div class="t_box_1">ease</div>
+        <div class="t_box_2">linear</div>
+        <div class="t_box_3">ease-in</div>
+        <div class="t_box_4">ease-out</div>
+        <div class="t_box_5">ease-in-out</div>
+        <div class="t_box_6">cubic</div>
+    </div>
+
+
+    <!-- 
+
+        transition / 변화
+        => 객체를 서서히 변화시키는 속성
+        => 변화가 일정시간에 걸쳐서 일어나도록 함
+
+        [transition 속성]
+
+        1. transition-duration
+        => 변화 지속 시간
+        => 단위 : s / ms
+        => 1s = 1000ms
+        => 값을 지정하지 않는 경우, 기본값 0s 적용되어서
+        시각적으로 변화 확인 불가
+        => :hover 상태일때 transition-duration 적용하면
+        마우스를 뗏을때 변화 확인 불가
+        => 기본값 상태에 적용할것!!
+
+        2. transition-property
+        => 변화를 적용시킬 속성을 정함
+        => all
+        => 기재하지 않는 경우도 있음
+
+        3. transition-timing-function
+        => 변화의 진행 속도(가속도) 지정
+        => 기본값 : ease
+
+        4. transition-delay
+        => 변화의 시작 시간을 연기함
+
+
+     -->
+
+
+</body>
+</html>

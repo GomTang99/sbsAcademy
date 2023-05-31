@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>정리</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .margin_box{
+            width: 30%;
+            height: 300px;
+            background-color: salmon;
+            margin: 150px auto 0;
+            /* float: left; */
+        }
+        /* 
+        ===> 단독 중앙 정렬 
+        ===> float:left와 혼용하여 사용 불가
+        ===> margin : auto와 float:left 함께 사용 불가
+        */
+
+
+        .out_box{
+            width: 1000px;
+            height: 1000px;
+            background-color: green;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        /* 
+        태그 안에 태그를 중앙 정렬해야하는 경우
+        */
+
+        body{
+            height: 1000vh;
+        }
+
+        .in_box{
+            width: 300px;
+            height: 300px;
+            background-color: gold;
+        }
+
+
+        .position_box{
+            width: 400px;
+            height: 400px;
+            background-color: lightblue;
+            position: relative;
+            left: 50%;
+            margin-left: -200px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 1. 중앙 정렬 -->
+
+    <div class="margin_box"></div>
+
+    <div class="out_box">
+        <div class="in_box"></div>
+    </div>
+
+    <div class="position_box"></div>
+</body>
+</html>

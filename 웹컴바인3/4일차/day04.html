@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 04</title>
+</head>
+<body>
+
+    <h2>
+        
+        or(||), not(!), and(&&)
+
+    </h2>
+    
+
+    <script>
+
+        //------------------------------------------------------------------
+        // 3일차 복습문제
+        // (2<1 && 'Ulsan' !== 'Ulsan');
+
+        // (7 !== 7 || 4 < 3);
+
+        // let x = 3;
+        // console.log(x>4 || !(x>2));
+
+
+        //------------------------------------------------------------------
+
+        // ★ typeof 연산자는 4칙 연산자보다 우선순위가 높다. ★ 
+        // NaN => not of number
+
+        //------------------------------------------------------------------
+
+        // null 병합 연산자
+        // ?? 두개를 사용해서 null 혹은 undefined 값을 가려내는 연산자.
+
+        // 연산자 왼편의값이 null이나 undefined이면 오른쪽 값을 리턴, 아니면 왼쪽 값을 리턴
+        // let example1 = null ?? 'I';
+        // let example2 = undefined ?? 'Love';
+        // let example3 = 'IU' ?? 'JavaScript';
+        // console.log(example1, example2, example3);
+        
+        //------------------------------------------------------------------
+
+        // const title1 = false || 'hello';
+        // const title2 = false ?? 'hello';
+        // console.log(title1);
+        // console.log(title2);
+        // const width1 = 0 || 140;
+        // const width2 = 0 ?? 140;
+        // console.log(width1);
+        // console.log(width2);
+
+        //------------------------------------------------------------------
+
+        // Symbol과 BigInt\
+
+        // const user1 = Symbol('this is a User');
+        // const user2 = Symbol('this is a User');
+        // console.log(user1 === user2);
+
+
+        // BigInt타입 
+        // 소수점은 SyntaxError가 나기에 소수점 뒤에자리는 제외한다.
+
+        //------------------------------------------------------------------
+
+        // 연습해보기
+        // 문자 -> 숫자
+        // 불린 -> 숫자
+        // 문자 -> 불린
+        
+        //------------------------------------------------------------------
+
+        // (4 + '2')
+        // (4 + 2)
+        // (4 - true)
+        // (4 * false)
+        // (4 / '2')
+        // ('4' ** true)
+        // (4 % 'two')
+
+        //------------------------------------------------------------------
+
+        //문제
+        // Number('1'+'2'+'3') - Number(true)
+        // Boolean("false") => true
+        // Boolean(6%2) => false
+        // Boolean(Nan) || Boolean('0') => true
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>미디어쿼리</title>
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+    <div class="box"></div>
+
+
+    <!-- 
+
+        미디어쿼리 (media query)
+        - 반응형 웹디자인의 기본
+        - 단말기의 유형, 화면 해상도, 뷰포트 너비에 따라 css스타일을 다르게 적용하는것
+
+
+        [ 미디어쿼리 기본 틀 ] 
+        @media 미디어의유형 (조건) {실행코드}
+
+        [ 미디어의 유형 ]
+        
+        - print : 인쇄물 및 출력 미리보기 화면에 적용
+
+        @media print {
+            body{
+                font-size : 12pt;
+            }
+            /* 12pt = 16px = 1rem */
+        }
+        => 페이지가 인쇄된 경우에만 폰트 사이즈를 12pt로 지정
+
+
+        - screen : 모니터와 같은 스크린 화면
+        
+        - speech : 스크린 리더기
+        @media speech {
+            img{
+                width: 100%;
+            }
+        }
+
+        - all : 모든 장치 
+
+
+
+        [ 분기점 = break point ]
+
+        - pc
+        min-width : 1024px
+        => 최소 width가 1024px, 즉 1024px 이상인 경우
+
+        - tab
+        min-width : 768px and max-width : 1023px
+        => 최소 768 ~ 최대 1023px 사이에 있는 디바이스
+
+        - mobile
+        max-width : 767px
+        => 최대 width가 767px, 즉 767px 이하인 경우
+
+
+     -->
+
+
+
+    
+</body>
+</html>

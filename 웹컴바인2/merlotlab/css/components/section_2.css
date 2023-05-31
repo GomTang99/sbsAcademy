@@ -1,0 +1,134 @@
+.section_2{
+    width: 100%;
+    padding: 150px 0;
+    background: url(../../img/section_2/main_business_bg1.jpg) no-repeat top center;
+    position: relative;
+}
+
+.business_wrap_1{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+}
+
+.main_business_txt{
+    width: 40%;
+    padding-top: 150px;
+}
+
+.main_businness_logo{
+    width: 130px;
+}
+
+.main_business_txt > h4{
+    font-size: 60px;
+    text-transform: var(--upperCase);
+    font-family: var(--eng);
+    margin: 20px 0;
+}
+
+.main_business_txt > p{
+    font-size: 18px;
+    opacity: .7;
+    line-height: 23px;
+}
+
+.more_btn{
+    width: 180px;
+    height: 50px;
+    background-color: var(--mainColor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    color: var(--whiteColor);
+    font-family: var(--eng);
+    text-transform: var(--upperCase);
+    font-size: 14px;
+    font-weight: var(--bold);
+    margin-top: 45px;
+    transition: background-color .5s;
+}
+
+.more_btn:hover{
+    background-color: var(--btnColor);
+}
+
+.main_business_img{
+    /* width : 60%; */
+    flex: 1;
+    /*
+    flex-grow : 1;
+    flex-shirink : 1;
+    flex-basis : auto;
+    */
+}
+
+.business_img{
+    width: 100%;
+}
+
+
+.business_img_txt{
+    max-width: 500px;
+    width: 80%;
+    background-color: var(--whiteColor);
+    padding: 40px 30px;
+    position: relative;
+    top: -100px;
+    /* transform : translateY(-100px); */
+}
+
+.business_img_txt > p:first-child{
+    font-size: 18px;
+    color: var(--mainColor);
+}
+
+.business_img_txt > h5{
+    font-size: 40px;
+    font-family: var(--eng);
+    margin: 10px 0 20px;
+}
+
+.business_img_txt > .sub_txt{
+    opacity: .7;
+    line-height: 21px;
+    margin-bottom: 30px;
+}
+
+.business_img_txt > span{
+    text-transform: var(--upperCase);
+    font-size: 14px;
+}
+
+/* business_wrap_1_end */
+
+
+.business_wrap_2{
+    width: 100%;
+    display: flex;
+    gap: 130px;
+    position: relative;
+    z-index: 99;
+}
+
+.business_wrap_2 .business_img_txt{
+    width: 90%;
+}
+
+.business_wrap_2 > .main_business_img:last-child{
+    padding-top: 100px;
+}
+
+.section_2::after{
+    content: "";
+    display: inline-block;
+    width: 100%;
+    height: 850px;
+    background: url(../../img/section_2/main_business_bg2.jpg) no-repeat top center;
+    position: absolute;
+    bottom: 0;
+}
+
+/* section_2_end */

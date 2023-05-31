@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>input</title>
+
+    <style>
+
+        body{
+            height: 1000vh;
+        }
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        input[type="text"]{
+            border: 2px solid red;
+        }
+
+        #side_1:checked+label{
+            color: red;
+        }
+        /* 
+
+        + : 바로뒤에 하나만 잡을때
+
+        ~ : 모두다 잡을때
+
+         */
+
+
+    </style>
+
+</head>
+<body>
+
+    <input type="text">
+    <!-- 한 줄의 기본 텍스트 박스 -->
+
+    <br/>
+
+    <input type="search" placeholder="검색">
+    <!-- 검색어 입력창 -->
+    <!-- 
+        placeholder : 미리보기 텍스트
+        글자를 미리 넣어두고 사용자가 입력을 하면 사라짐
+     -->
+
+     <input type="submit" value="검색">
+     <!-- 양식을 제출할 때 사용 -->
+     <!-- 
+        value : 미리 설정해 놓은 값
+        클릭 및 입력을 해도 글자가 지워지지 않음
+      -->
+      
+      <br/>
+
+      <input type="email" placeholder="이메일">
+      <!-- 이메일 입력 창 -->
+      <br/>
+
+      <input type="tel" placeholder="전화번호">
+      <!-- 전화번호 입력 창 -->
+      <br/>
+
+      <input type="password" placeholder="비밀번호">
+      <!-- 비밀번호 입력 창 -->
+      <br/>
+
+      <textarea cols="30" rows="10"></textarea>
+      <!-- 여러줄의 텍스트 박스 -->
+      <br/>
+
+      <input type="time">
+      <!-- 시간 출력 -->
+      <input type="date">
+      <!-- 날짜 출력 -->
+      <input type="week">
+      <!-- 주 단위 표현 -->
+
+      <br/>
+
+      <select>
+        <option>1번옵션</option>
+        <option>2번옵션</option>
+        <option>3번옵션</option>
+      </select>
+      <br/>
+
+
+      <input type="email" placeholder="이메일 주소" >@
+      <select>
+        <option>---이메일을 선택하세요---</option>
+        <option>naver.com</option>
+        <option>naver.com</option>
+        <option>naver.com</option>
+      </select>
+      <br/>
+
+
+      <h3>설문조사</h3>
+      <p>선호도 조사</p>
+
+      <input type="radio" name="search" id="tab_1">
+      <label for="tab_1">만족</label>
+      
+      <input type="radio" name="search" id="tab_2">
+      <label for="tab_2">보통</label>
+      
+      <input type="radio" name="search" id="tab_3">
+      <label for="tab_3">불만족</label>
+
+      <br/>
+
+      <h3>사이드 메뉴</h3>
+      
+      <input type="checkbox" id="side_1">
+      <label for="side_1">사이다</label>
+
+      <input type="checkbox" id="side_2">
+      <label for="side_2">콜라</label>
+
+      <input type="checkbox" id="side_3">
+      <label for="side_3">환타</label>
+
+
+
+    
+</body>
+</html>

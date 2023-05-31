@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mouse</title>
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            background-color: #333;
+        }
+
+        .icon_mouse{
+            width: 30px;
+            height: 50px;
+            border: 2px solid white;
+            position: absolute;
+            left: 50%;
+            bottom: 50px;
+            transform: translateX(-50%);
+            border-radius: 20px;
+        }
+
+        .ball{
+            width: 4px;
+            height: 4px;
+            background-color: white;
+            border-radius: 50%;
+            position: absolute;
+            left: 50%;
+            top: 8px;
+            transform: translateX(-50%);
+
+            /* 애니메이션 축약 */
+            animation: ball_move 1s linear infinite alternate;
+
+            /* 
+            
+            animation : name duration timing-function count direction;
+            
+            */
+        }
+
+        @keyframes ball_move {
+            0%{
+                top: 8;
+                /* 초기값이 변하지않는 경우, from은 생략 가능 */
+            }
+            100%{
+                top: 16px;
+            }
+        }
+
+        /* 가상선택자 before, after */
+        .icon_mouse::before{
+            content: "SCROLL";
+            color: white;
+            position: absolute;
+            top: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* 
+        
+        가상선택자 ::before / ::after
+
+        .클래스::before{
+            content: "";
+        } 
+
+        => 사용 시 위치 주의!
+        => content: ""; 에는 아무런 내용이 안들어가더라도 반드시 기재해야함
+        
+        
+        */
+
+
+
+    </style>
+
+</head>
+<body>
+
+    <div class="icon_mouse">
+        <div class="ball"></div>
+    </div>
+
+    
+</body>
+</html>

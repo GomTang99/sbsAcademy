@@ -1,0 +1,13 @@
+https://via.placeholder.com/100x50
+
+
+속성에서 사용 할 수 있는 키워드 조합
+1. left top
+2. left center
+3. left bottom
+4. right top
+5. right center
+6. right bottom
+7. center top
+8. center center
+9. center bottom

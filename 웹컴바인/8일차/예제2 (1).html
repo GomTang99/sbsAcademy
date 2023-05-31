@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>예제2번</title>
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .wrap{
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo{
+            width: 200px;
+            height: 80px;
+            background-color: red;
+            margin: 0 auto;
+        }
+
+        nav{
+            width: 200px;
+            height: 50px;
+            background-color: burlywood;
+            text-align: center;
+            line-height: 50px;
+            float: left;
+        }
+
+        .total_section{
+            width: 1200px;
+        }
+
+        .top > .div_1{
+            width: 940px;
+            height: 500px;
+            background-color: salmon;
+            float: left;
+            border-right: 10px solid skyblue;
+            border-bottom: 10px solid skyblue;
+        }
+
+        .top > .div_2{
+            width: 260px;
+            height: 250px;
+            background-color: salmon;
+            float: left;
+            border-bottom: 10px solid skyblue;
+        }
+
+        .top > .div_3{
+            width: 260px;
+            height: 250px;
+            background-color: salmon;
+            float: left;
+            border-bottom: 10px solid skyblue;
+        }
+
+        .left > .left_div{
+            float: left;
+        }
+
+        .left > .left_div > .div_1{
+            width: 250px;
+            height: 240px;
+            background-color: salmon;
+            float: left;
+            border-bottom: 10px solid skyblue;
+            border-right: 10px solid skyblue;
+        }
+
+        .left > .left_div > .div_2{
+            width: 250px;
+            height: 480px;
+            background-color: salmon;
+            clear: both;
+            border-bottom: 10px solid skyblue;
+            border-right: 10px solid skyblue;
+        }
+
+        .left > .left_div > .div_3{
+            width: 250px;
+            height: 240px;
+            background-color: salmon;
+            border-right: 10px solid skyblue;
+        }
+
+        .left > .right_div{
+            float: left;   
+        }
+
+        .left > .right_div > .div_1{
+            width: 270px;
+            height: 490px;
+            background-color: salmon;
+            border-bottom: 10px solid skyblue;
+            border-right: 10px solid skyblue;
+        }
+
+        .left > .right_div > .div_2{
+            width: 270px;
+            height: 240px;
+            background-color: salmon;
+            border-bottom: 10px solid skyblue;
+            border-right: 10px solid skyblue;
+        }
+
+        .left > .right_div > .div_3{
+            width: 270px;
+            height: 230px;
+            background-color: salmon;
+            border-bottom: 10px solid skyblue;
+            border-right: 10px solid skyblue;
+        }
+
+        .right{
+            float: right;
+        }
+
+        .right > .top_div > .div_1{
+            width: 340px;
+            height: 245px;
+            background-color: salmon;
+            border-bottom: 10px solid skyblue;
+            float: right;
+        }
+
+        .right > .top_div > .div_2{
+            width: 340px;
+            height: 245px;
+            background-color: salmon;
+            border-bottom: 10px solid skyblue;
+            border-right: 10px solid skyblue;
+        }
+
+        .right > .top_div > .div_3{
+            width: 340px;
+            height: 245px;
+            background-color: salmon;
+            float: left;
+            border-bottom: 10px solid skyblue;
+            border-right: 10px solid skyblue;
+        }
+
+        .right > .top_div > .div_4{
+            width: 340px;
+            height: 245px;
+            background-color: salmon;
+            float: left;
+            border-bottom: 10px solid skyblue;
+        }
+
+
+        .right > .div_5{
+            width: 680px;
+            height: 715px;
+            background-color: salmon;
+        }
+
+        footer{
+            width: 1200px;
+            height: 200px;
+            background-color: dimgray;
+            clear: both;
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <div class="wrap">
+        <header>
+            <h1 class="logo">LOGO</h1>
+            <nav>메뉴1</nav>
+            <nav>메뉴2</nav>
+            <nav>메뉴3</nav>
+            <nav>메뉴4</nav>
+            <nav>메뉴5</nav>
+            <nav>메뉴6</nav>
+        </header>
+        
+        <section class="total_section">
+
+            <section class="top">
+                    <div class="div_1"></div>
+                    <div class="div_2"></div>
+                    <div class="div_3"></div>
+            </section>
+    
+            <section class="left">
+
+                <div class="left_div">
+                    <div class="div_1"></div>
+                    <div class="div_2"></div>
+                    <div class="div_3"></div>
+                </div>
+
+                <div class="right_div">
+                    <div class="div_1"></div>
+                    <div class="div_2"></div>
+                    <div class="div_3"></div>
+                </div>
+                    
+                
+            </section>
+    
+            <section class="right">
+                <section class="top_div">
+                    <div class="div_1"></div>
+                    <div class="div_2"></div>
+                    <div class="div_3"></div>
+                    <div class="div_4"></div>
+                </section>
+                <div class="div_5"></div>
+            </section>
+
+        </section>
+        
+
+        <footer></footer>
+    </div>
+
+
+
+
+</body>
+</html>

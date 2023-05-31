@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 12</title>
+</head>
+<body>
+
+    <h2>
+        for of문 / for in문 / while문
+    </h2>
+
+
+    <script>
+
+        //------------------------------------------------------------------
+
+        // for of... / for in...
+
+        //let brands = ['현대', '애플', '삼성'];
+
+        /*
+        for (let i = 0; i < 3; i++) {
+            console.log(brands[i]);
+        }
+        */
+
+        // for of문
+        // es6 2015 생겨나서 사용되었습니다.
+
+        /*
+        for (value of brands) {  
+            console.log(value);
+        }
+        */
+
+        // for in문
+
+        /*
+        let arr = ['아메리카노', '라떼', '차'];
+
+        //for of문 => value반환
+        for (let v of arr) {
+            console.log(v);
+        }
+
+        console.log('------------------------');
+
+        //for in문 => index반환  
+        // 배열형태로 담아야지만 value값으로 반환해줌
+        for (let k in arr) {
+            console.log(arr[k]);
+        }
+        */
+        
+        //------------------------------------------------------------------
+
+        // 실습문제
+        
+        // 홀수만 출력하는 프로그램 
+        /*
+        const numbers = [1,2,3,4,5,6,7,8,9,10];
+
+        for (let v of numbers) {
+            if(v % 2 == 0) {
+
+            }else {
+                console.log(v);
+            }
+        }
+        */
+
+        //강사님 풀이
+        /*
+        function printOddNumbers(arr) {
+            for (const num of arr) {
+                if (num % 2 != 0) {
+                    console.log(num);
+                }
+            }
+        }
+        const numbers = [1,2,3,4,5,6,7,8,9,10];
+        printOddNumbers(numbers);
+        */
+
+        // 역순 출력
+        
+        //const input = 'Hello, World!';
+
+        /*
+        let result = '';
+        for (let v of input) {
+            result = v + result;
+        }
+        console.log(result);
+        */
+
+        // 함수 풀이
+        /*
+        function reverseString(str) {
+            let result = '';
+            for (let char of str) {
+                result = char + result;
+            }
+            console.log(result);
+        }
+
+        reverseString(input);
+        */
+
+
+        //------------------------------------------------------------------
+
+        /*
+        while (조건부문) {
+            동작부분
+        }
+
+        while문과 for문은 서로 대체가 가능
+        */
+       
+        /*
+        let i = 1;
+        while (i <= 10) {
+            console.log(`${i} 웹컴바인 수강생 여러분 화이팅`);
+            i++;
+        }
+        console.log('-------------------------------------------');
+        for (let i =1; i <= 10; i++) {
+            console.log(`${i} 웹컴바인 수강생 여러분 화이팅`);
+        }
+        */
+
+        /*
+        let i = 30;
+        while (i % 7 !== 0) {
+            i++;
+        }
+        console.log(i);
+        */
+
+        //------------------------------------------------------------------
+
+        // while문 실습문제
+        
+        //1이상 100이하의 홀수를 모두 출력
+
+        /*
+        let i = 1;
+        while(i <= 100) {
+            if(i % 2 !== 0) {
+                console.log(i);
+            }
+            i++;
+        }
+        */
+
+        // 강사님 풀이
+        
+        // 첫번째 방법
+
+        /*
+        let i = 1;
+        while (i <= 100) {
+            if (i % 2 === 1) {
+                console.log(i);
+            }
+            i++;
+        }
+        */
+
+        // 두번째 방법
+        // i를 1부터 50까지 반복하면서 i * 2 - 1을 하면서 출력
+
+        /*
+        let i = 1;
+        while (i <= 50) {
+            console.log(i * 2 - 1);
+            i++;
+        }
+        */
+
+        // 세번째 방법
+        // i를 2씩 증가시키기
+
+        /*
+        let i = 1;
+        while (i <= 100) {
+            console.log(i);
+            i += 2;
+        }
+        */
+
+
+        //------------------------------------------------------------------
+        
+        
+        
+
+    </script>
+    
+</body>
+</html>

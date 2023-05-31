@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 10</title>
+</head>
+<body>
+    
+    <h2>
+        switch문
+    </h2>
+    
+
+
+    <script>
+
+        //------------------------------------------------------------------
+
+        // 중복 단어 제거(원본)
+        // 고차함수
+        // let str = ["good", "time", "good", "time", "study"];
+        
+        /*
+        function distinctword(s) {
+            let ans;
+            //console.log(s.indexOf(""));
+            ans = s.filter(function (v,i) {
+                console.log(v, i);
+                return s.indexOf(v) === i;
+            });
+            return ans;
+        }
+
+        let str = ["good", "time", "good", "time", "study"];
+        console.log(distinctword(str));
+        */
+
+
+        //------------------------------------------------------------------
+        
+        // 변형(풀이1) => 객체이용
+
+        /*
+        let str = ["good", "time", "good", "time", "study"];
+        
+        function distinctword(s) {
+            const uniqueWord = [... new Set(s)];
+            return uniqueWord;
+        }
+
+        console.log(distinctword(str));
+        */
+
+        //------------------------------------------------------------------
+
+        // 변형(풀이2)
+
+        // includes 메소드, push 메소드
+
+        /*
+        function findWord(s) {
+            let uniqueWord = [];
+
+            for (let i = 0; i < str.length; i++) {
+                if (!uniqueWord.includes(str[i])) {
+                    uniqueWord.push(str[i]);
+                }
+            }
+            return uniqueWord;
+        }
+
+        let str = ["good", "time", "good", "time", "study"];
+        console.log(findWord(str));
+        */
+
+        //------------------------------------------------------------------9
+
+        // switch문
+        
+        /*
+        let inputNumber = prompt('한자리 숫자를 입력하세요.');
+        
+        switch (inputNumber) {
+            case '0':
+                alert('제로');
+                break;
+            case '1':
+                alert('하나');
+                break;
+            case '7':
+                alert('행운입니다.');
+                break;
+            default:
+                alert('불행');
+                break;
+        }
+        */
+
+        //------------------------------------------------------------------
+
+        /*
+        let courseName = 'C';
+        switch (courseName) {
+            case 'C':
+                alert("게살스프, 칠리새우");
+            case 'B':
+                alert("유산슬");
+            case 'A':
+                alert("짜장면, 짬뽕, 탕수육, 양장피, 팔보채");
+                break;
+        }
+        */
+
+        //------------------------------------------------------------------
+
+        // 아이유가 공연 티켓 판매 프로그램 개발
+        // 좌석등급에 따라서 가격을 알려주는 부분을 해결해야 한다.
+        
+        /*
+        let VIPPrice = 15;
+        let RPrice = 13;
+        let SPrice = 10;
+        let APrice = 8;
+
+        function checkPrice(seat) {
+            switch (seat) {
+                case 'VIP':
+                    console.log(`VIP석은 ${VIPPrice}만원입니다.`);
+                    break;
+                case 'R':
+                    console.log(`R석은 ${RPrice}만원입니다.`);
+                    break;
+                case 'S':
+                    console.log(`S석은 ${SPrice}만원입니다.`);
+                    break;
+                case 'A':
+                    console.log(`A석은 ${APrice}만원입니다.`);
+                    break;
+                default:
+                    console.log('VIP, R, S, A 좌석중 하나를 선택해주세요.');
+            }
+        }
+
+        checkPrice('R');
+        checkPrice('VIP');
+        checkPrice('S');
+        checkPrice('A');
+        */
+
+
+
+
+
+
+
+    </script>
+
+
+
+</body>
+</html>

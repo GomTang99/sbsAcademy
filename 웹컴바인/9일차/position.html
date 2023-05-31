@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position</title>
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .wrap{
+            margin: 100px auto;
+            position: relative;
+            border: 10px solid black;
+        }
+
+        .box{
+            width: 300px;
+            height: 300px;
+            text-align: center;
+            line-height: 300px;
+            font-size: 30px;
+            font-weight: 900;
+        }
+
+        .box:first-child{
+            background-color: gold;
+            position: static;
+            top: 100px;
+            left: 100px;
+        }
+
+        .box:nth-child(2){
+            background-color: salmon;
+            position: relative;
+            top: 100px;
+            left: 100px;
+        }
+
+        .box:nth-child(3){
+            background-color: green;
+            position: absolute;
+            bottom: 0;
+        }
+
+
+    </style>
+
+
+</head>
+<body>
+
+    <div class="wrap">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <!-- .box{$}*n + tab -->
+    </div>
+
+
+
+
+    
+    <!-- 
+
+        position
+        => 레이아웃을 배치, 요소를 위치시킬때 사용
+
+        top, bottom, left, right
+        => position이 적용된 속성은 위 4개의 좌표로 움직일 수 있음
+
+        margin / float
+
+
+        [position 속성]
+
+        1. static 
+        => position 속성의 기본값
+        => 좌표값의 영향을 받지 않음 (좌표값 무시)
+        => 요소를 문서의 흐름에 맞게 배치
+
+        2. relative
+        => 상대값
+        => 원래 있어야 할 자리를 기준으로 상대적으로 위치값 변경됨
+
+        3. absoulte
+        => 절대값
+        => 요소를 기준으로 위치값 변경
+        => absolute가 사용되는 요소의 부모요소에 반드시 relative 넣어주어야함!!
+        
+        ** 만약, 부모요소에 relative가 없다면 브라우저 왼쪽상단을 기준으로
+        자기 마음대로 위치를 변경함 **
+
+        부모요소에 relative를 넣어줌으로써 absolute 된 요소가 움직일 수 있는
+        범위를 정해줌
+
+        
+
+
+
+
+     -->
+
+
+
+
+</body>
+</html>

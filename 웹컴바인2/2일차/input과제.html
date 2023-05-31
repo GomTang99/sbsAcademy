@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>input 과제</title>
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .wrap{
+            width: 600px;
+            height: 800px;
+            background-color: salmon;
+            margin: 0 auto;
+        }
+
+        #box:checked~.box1{
+            width: 600px;
+            height: 500px;
+            background-color: gold;
+        }
+
+        .box1{
+            transition: all 1s;
+            height: 0;
+        }
+
+        .bottom{
+            width: 600px;
+            height: 200px;
+            background-color: gray;
+            position: absolute;
+            bottom: 10%;
+        }
+
+
+
+        
+
+    </style>
+
+</head>
+<body>
+
+    <div class="wrap">
+        <input type="checkbox" id="box">
+        <label for="box"></label>
+        <div class="box1"><p class="text">위에서 나타나는 박스</p></div>
+        <div class="bottom"></div>
+    </div>
+    
+</body>
+</html>

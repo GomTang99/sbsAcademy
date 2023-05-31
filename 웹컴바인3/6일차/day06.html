@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 06</title>
+</head>
+<body>
+
+    <h2>
+        함수 심화
+    </h2>
+    
+
+
+    <script>
+        // 5일차 복습 문제
+
+        // function BTS(members) {
+        //     console.log(`${members}(이)가 대화에 참여했습니다.`);
+        // }
+
+        // BTS('RM');
+        // BTS('진');
+        // BTS('슈가');
+        // BTS('제이홉');
+        // BTS('지민');
+        // BTS('뷔');
+        // BTS('정국');
+
+        //------------------------------------------------------------------
+
+        // function multiple(num1, num2) {
+        //     console.log(`${num1} * ${num2} = ${num1 * num2}`);
+        // }
+        // multiple(5,5);
+
+        //------------------------------------------------------------------
+
+        // 함수 심화
+        // 함수 표현식
+        //const printHello = function () {
+        //     console.log('Hello');
+        // };
+
+        //------------------------------------------------------------------
+
+        // 가능
+
+        // printHello();
+        // function printHello(){
+        //     console.log('Hello');
+        // }
+
+        //------------------------------------------------------------------
+
+        // 불가능
+
+        // printHello();
+        // const printHello = function(){
+        //     console.log('안녕');
+        // }
+
+        //------------------------------------------------------------------
+
+        // function printHello(){
+        //     function printJS(){
+        //         console.log('자바스크립트');
+        //     }
+        //     console.log('Hello');
+        //     printJS();
+        // }
+
+        // printHello();
+        // printJS();
+
+
+        //------------------------------------------------------------------
+
+        // const x = 10;
+        // if ( x < 11){
+        //     function printJS(){
+        //         console.log('자바스크립트');
+        //     }
+        // }
+
+        //------------------------------------------------------------------
+
+        // function sayHello() {
+        //     console.log('Hello');
+        //     console.log('자바스크립트 세상');
+        // }
+
+        // console.log('함수 호출 전');
+        // sayHello();
+        // console.log('함수 호출 후');
+
+        //------------------------------------------------------------------
+
+        // function squ(x) {
+        //     return x * x;
+        // }
+
+        // console.log('함수 호출 전');
+        // console.log(squ(10));
+        // console.log('함수 호출 후');
+
+        //------------------------------------------------------------------
+        
+        // function squ(x) {
+        //     return x * x;
+        // }
+
+        // console.log('함수 호출 전');
+        // console.log(squ(5) + squ(5));
+        // console.log('함수 호출 후');
+
+
+        //------------------------------------------------------------------
+
+        // 옵셔널 파라미터
+
+        // function sayHello(name) {
+        //     console.log(`안녕하세요 ${name}님!`);
+        // }
+
+        // sayHello('아이유');
+        // sayHello('제니');
+        // sayHello('유재석');
+
+        //------------------------------------------------------------------
+
+        // function intro(name, age, nationality = '한국') {
+        //     console.log(`제 이름은 ${name}입니다.`);
+        //     console.log(`저의 나이은 ${age}입니다.`);
+        //     console.log(`나의 나라는 ${nationality}입니다.`);
+        // }
+        // intro('아이유', 30, '대한민국');
+        // console.log('');
+        // intro('아이유', 20);
+
+        //------------------------------------------------------------------
+
+        // function greetings(name = 'IU', hobby = 'Song') {
+        //     console.log(`안녕 나의 이름은 ${name}`);
+        //     console.log(`나는 ${hobby}를 좋아해`);
+        // }
+        // greetings('제니');
+
+        // greetings(undefined, '제니');
+
+        //------------------------------------------------------------------
+
+        // function defaults(x, y = x + 3) {
+        //     console.log(`x : ${x}`);
+        //     console.log(`y : ${y}`);
+        // }
+        // defaults(2)
+        // defaults(2,3)
+
+        //------------------------------------------------------------------
+
+        // function orderMenu(sandwich, drink = '스프라이트') {
+        //     console.log(`주문하신 ${sandwich}, ${drink} 세트메뉴 나왔어요`);
+        // }
+
+        // orderMenu('서브웨이 에그');
+        // orderMenu('서브웨이 에그','콜라');
+        // orderMenu('서브웨이 멜트');
+        // orderMenu('이탈리안 비엠티', '닥터페퍼');
+        // orderMenu('에그마요', '환타 오렌지');
+
+        //------------------------------------------------------------------
+
+
+
+    </script>
+
+
+</body>
+</html>

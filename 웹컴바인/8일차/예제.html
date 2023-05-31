@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>예제</title>
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .wrap{
+            width: 1200px;
+            background-color: gray;
+            margin: 0 auto;
+        }
+
+        header{
+            width: 1200px;
+            height: 150px;
+            background-color: salmon;
+        }
+
+        .logo{
+            width: 200px;
+            height: 150px;
+            background-color: red;
+            text-align: center;
+            line-height: 150px;
+            float: left;
+        }
+
+        header > nav{
+            width: 800px;
+            height: 100px;
+            background-color: yellow;
+            float: left;
+            margin: 25px 100px;
+            text-align: center;
+            line-height: 100px;
+            font-weight: bold;
+            font-size: 30px;
+        }
+
+        .section_1{
+            width: 1200px;
+            height: 200px;
+            background-color: green;
+            margin-top: 50px;
+            text-align: center;
+            line-height: 200px;
+            font-weight: bold;
+            font-size: 30px;
+        }
+
+        .section_2{
+            width: 1200px;
+            height: 300px;
+            background-color: antiquewhite;
+            margin-top: 50px;
+        }
+
+        .section_2 > .box_1{
+            width: 380px;
+            height: 300px;
+            background-color: salmon;
+            float: left;
+            margin-right: 30px;
+        }
+
+        .section_2 > .box_2{
+            width: 380px;
+            height: 300px;
+            background-color: salmon;
+            float: left;
+            margin-right: 30px;
+        }
+
+
+        .section_2 > .box_3{
+            width: 380px;
+            height: 300px;
+            background-color: salmon;
+            float: left;
+        }
+
+        footer{
+            width: 1200px;
+            height: 100px;
+            background-color: lightgreen;
+            margin-top: 50px;
+            text-align: center;
+            line-height: 100px;
+            font-weight: bold;
+            font-size: 30px;
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <div class="wrap">
+        <header>
+            <h1 class="logo">LOGO</h1>
+            <nav>메뉴영역</nav>
+        </header>
+        <section class="section_1">섹션1</section>
+        <section class="section_2">
+            <div class="box_1"></div>
+            <div class="box_2"></div>
+            <div class="box_3"></div>
+        </section>
+        <footer>푸터</footer>
+    </div>
+
+
+</body>
+</html>

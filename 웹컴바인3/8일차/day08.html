@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 08(Arrow Function 만들기)</title>
+</head>
+<body>
+
+    <button id="myBtn">클릭해보세요.</button>
+    
+
+
+
+
+    <script>
+
+        //------------------------------------------------------------------
+
+        // var ==> 호이스팅이 필요할때
+        // 7일차 복습
+
+        // function ranking(str1,str2, ...others) {
+        //     console.log('나는 가수다의 우승 결과입니다.');
+        //     console.log(`우승 : ${str1}`);
+        //     console.log(`준우승 : ${str2}`);
+        //     for (const arg of others){
+        //         console.log(`참가상 : ${arg}`);
+        //     }
+        // }
+
+        // ranking('RM','진','슈가','제이홉','지민','뷔');
+
+        // 일반 파라미터와 함께 사용할때는 반드시 가장 마지막에 사용해야합니다.
+
+        //------------------------------------------------------------------
+
+        // 실습
+
+        // function ignoreFirstWord(product1, ...otherproduct) {
+        //     console.log('');
+        //     for(const arg of otherproduct){
+        //         console.log(`제품 : ${arg}`);
+        //     }
+        // }
+        
+        
+        // ignoreFirstWord('1세대','2세대','3세대');
+        // ignoreFirstWord('아이팟1','아이팟2','아이팟3','아이팟4');
+        // ignoreFirstWord(35,35,78,5,97,57);
+
+        //------------------------------------------------------------------
+
+        // 풀이(shitf)
+        
+        // function ignoreFirstWord(...rest) {
+        //     rest.shift();
+        //     for(const ele of rest){
+        //         console.log(ele);
+        //     }
+        // }
+        
+        
+        // ignoreFirstWord('1세대','2세대','3세대');
+        // ignoreFirstWord('아이팟1','아이팟2','아이팟3','아이팟4');
+        // ignoreFirstWord(35,35,78,5,97,57);
+
+        //------------------------------------------------------------------
+
+        // Arrow Function es2015
+
+        // const double = (number) => {
+        //     return number * 2;
+        // }
+        
+        // console.log(double(5));
+        
+        // const myBtn = document.querySelector('#myBtn');
+        
+        // myBtn.addEventListener('click', () => {
+        //     console.log('버튼이 클릭 되었습니다.');
+        // });
+
+
+        //------------------------------------------------------------------
+
+        // 상황에 따라 짧게 표현할 수 있다.
+
+        // 1. 
+        // const double = (number) => number * 2;
+        // console.log(double(6));
+
+
+        // 2.
+        // const double = number => number * 2;
+        // console.log(double(4));
+
+        // 3.
+        // 파라미터가 2개 이상 있거나 없을 경우에는 소괄호를 적어야합니다.
+
+        // 파라미터가 한개인 경우
+
+        // const double = number => {
+        //     return number * 2
+        // }
+        // console.log(double(4));
+
+        // 파라미터가 2인 경우
+
+        // const sum = (a,b) => {
+        //     return a+b;
+        // }
+
+        // 파라미터가 없는 경우
+
+        // const sayHello = () => {
+        //     return {name : 'Hello'};
+        // }
+
+        //------------------------------------------------------------------
+
+        // const double = (number) => number * 2;
+        // const sum = (a,b) => {
+        //     const result = a + b;
+        //     return result;
+        // }
+
+        // const sayHello = () => {
+        //     return {name : '안녕'};
+        // }
+
+        //------------------------------------------------------------------
+
+        // this 키워드  (window => 전역개체)
+        // this는 함수를 호출하는 객체를 가리키는 키워드 이다.
+
+        /*
+        function fullName() {
+            return `${this.firstName} ${this.lastName}`;
+        }
+
+        const guest = {
+            firstName : '아',
+            lastName : '이유',
+            fullName : fullName,
+        };
+
+        const host = {
+            firstName : '홍',
+            lastName : '길동',
+            fullName : fullName,
+        }
+
+        console.log(guest.fullName());
+        console.log(host.fullName());
+        */
+
+        //------------------------------------------------------------------
+
+        /*
+        console.log(this);
+
+        function getThis() { //일반 함수
+            console.log(this);
+        }
+
+        const myObject = {
+            content : 'myObejct',
+            getThis : getThis,
+        };
+
+        const otherObject = {
+            content : 'ohterObejct',
+            getThis : getThis,
+        };
+
+        myObject.getThis();
+        otherObject.getThis();
+        */
+
+        //------------------------------------------------------------------
+
+        /*
+        console.log(this);
+
+        const getThis = () => { //Arrow Function 함수
+            console.log(this);
+        }
+
+        const myObject = {
+            content : 'myObejct',
+            getThis : getThis,
+        };
+
+        const otherObject = {
+            content : 'ohterObejct',
+            getThis : getThis,
+        };
+
+        myObject.getThis();
+        otherObject.getThis();
+        */
+
+        // 객체 메소드를 만들때는 일반 함수로 만드는 것이 좋다.
+
+        //------------------------------------------------------------------
+
+        // 내장 함수
+        // String(3);
+        // Number('5');
+        // parseInt('100세');
+        // parseFloat();
+        // alert('dafsf');
+        // prompt();
+        // confirm();
+
+        //------------------------------------------------------------------
+
+        //if문
+        /*
+        var inputNumber = prompt("한자리 숫자를 입력하세요");
+        if (inputNumber === '7') {
+            alert('행운입니다.');
+        }
+        else {
+            alert('불행하네요');
+        }
+        */
+
+
+
+    </script>
+
+</body>
+</html>

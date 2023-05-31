@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>애니메이션</title>
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .box{
+            width: 300px;
+            height: 300px;
+            background-color: salmon;
+            animation-name: move;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-timing-function: cubic-bezier(0.89, 0.05, 0, 1);
+        }
+
+        .box:hover{
+            animation-play-state: paused;
+        }
+
+        @keyframes move {
+            0%{
+                transform: translateX(0);
+            }
+            25%{
+                border-radius: 50%;
+            }
+            50%{
+                background-color: gold;
+            }
+            100%{
+                transform: translateX(400px);
+            }
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="box"></div>
+
+    <!-- 
+
+        css 애니메이션
+
+        css + keyframe
+        => 애니메이션을 나타내는 css 스타일과 애니메이션의 중간 상태를 나타내는 keyframe으로 구성
+
+        => transition보다 규모가 더 크고 복잡하고 다양한 움직임을 구현
+
+        [ animation 속성 ]
+        
+        1. animation-name
+        => 애니메이션 이름 설정
+
+        <사용 가능한 이름>
+        - 단순단어 : move
+        - -으로 단어 연결 : apple-box
+        - _단어 연결 : move_box
+
+        <사용 불가한 이름>
+        - 특수문자 : ^^name, *name
+        예외) $는 사용 가능
+
+        - 첫 글자로 숫자 불가
+        1name (X) 
+        name1 (O)
+
+
+        2. animation-duration
+        => 애니메이션 재생 지속 시간
+        => 애니메이션을 한번 재생하는데 걸리는 시간 설정
+        => 사용 단위 : s / ms
+        => transition-duration과 유사
+        => animation-duration 적지 않을 시, 재생 X
+
+
+        3. animation-iteration-count
+        => 애니메이션 재생 횟수 설정
+        => 숫자  / 기본값 : 1
+        => infinite / 애니메이션 무한 반복 (가장 많이 사용)
+
+
+        4. animation-direction
+        => 애니메이션 재생 방향
+        => normal : 순방향
+        => reverse : 역방향
+        => alternate : 0 -> 100 -> 0 (가장 많이 사용)
+
+        5. animation-play-state
+        => 애니메이션 재생 상태 설정
+        => hover와 함께 결합해서 사용됨
+        => running / paused
+
+
+
+
+     -->
+
+
+
+    
+</body>
+</html>

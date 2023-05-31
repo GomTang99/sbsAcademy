@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transform</title>
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .box{
+            width: 200px;
+            height: 200px;
+            transition-duration: 1s;
+            background-color: gold;
+        }
+
+        .r_box{
+            background-color: teal;
+            padding: 20px;
+        }
+
+        .r_box:hover{
+            transform: rotateZ(180deg);
+            /* 
+            
+            rotate / 회전
+            rotate(00deg)
+            사용단위 : deg
+
+            */
+        }
+
+        .circle{
+            width: 100%;
+            height: 100%;
+            border: 10px solid white;
+            border-radius: 50%;
+        }
+
+        .t_box{
+            background-color: salmon;
+        }
+
+        .t_box:hover{
+            transform: translate(100px, 100px);
+            /* 
+            
+            translate / 이동
+            translate(X, Y)
+            사용단위 : px
+
+            */
+        }
+
+        .s_box{
+            margin: 50px auto;
+        }
+
+        .s_box:hover{
+            transform: scale(1.5);
+            /* 
+            
+            scale / 배율
+            scale((1)숫자)
+            사용단위 : 숫자
+            => 원본 : 1
+            => 원본 크기보다 더 크게 : 1보다 큰 수
+            => 원본 크기보다 더 작게 : 1보다 작은 수(소수점)
+
+            */
+        }
+
+        .k_box{
+            background-color: lightblue;
+            margin: 50px auto;
+        }
+
+        .k_box:hover{
+            transform: skew(50deg);
+            /* 
+            
+            skew / 왜곡, 기울임
+            skew(00deg)
+            사용단위 : deg
+
+            */
+        }
+
+        .container{
+            width: 100%;
+            height: 500px;
+            position: relative;
+            background-color: gray;
+        }
+
+        .absolute_box{
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: bisque;
+        }
+
+    </style>
+
+
+</head>
+<body>
+    
+    <h3>1. rotate</h3>
+    <div class="box r_box">
+        <div class="circle"></div>
+    </div>
+
+    <h3>2. translate</h3>
+    <div class="box t_box"></div>
+
+    <h3>3. scale</h3>
+    <div class="box s_box"></div>
+    
+    <h3>4. skew</h3>
+    <div class="box k_box"></div>
+
+    <div class="container">
+        <div class="absolute_box"></div>
+    </div>
+
+    <!-- 
+
+        transform / 변형
+        - 요소를 위치 움직임
+        - 회전
+        - 기울임
+        - 비율 변경
+
+        transform : translate();
+        => position으로 중앙 잡을때 중심점 세팅 역할도 병행
+        => translate(X,Y);
+        => translate(-50%, -50%);
+
+        
+
+     -->
+
+
+</body>
+</html>

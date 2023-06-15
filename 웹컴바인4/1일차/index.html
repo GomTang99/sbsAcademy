@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 01</title>
+</head>
+<body>
+
+    <script>
+        /*
+        // 절대값 => Math.abs
+        console.log(Math.abs(-10));
+        console.log(Math.abs(10));
+
+        // 최대값 => Math.max 
+        console.log(Math.max(7, 3, -5, 0, 8));
+
+        // 최소값 => Math.min 
+        console.log(Math.min(3, 2, -3, 0, 7));
+
+        // 거듭제곱 => Math.pow 
+        console.log(Math.pow(2, 3));
+        console.log(Math.pow(6, 2));
+
+        // 제곱근 => Math.sqrt 
+        console.log(Math.sqrt(25));
+        console.log(Math.sqrt(49));
+
+        // 반올림 => Math.round 
+        console.log(Math.round(2.3));
+        console.log(Math.round(2.4));
+        console.log(Math.round(2.49));
+        console.log(Math.round(2.5));
+        console.log(Math.round(2.8));
+
+        // 버림 => Math.floor
+        console.log(Math.floor(2.4));
+        console.log(Math.floor(2.49));
+        console.log(Math.floor(2.8));
+
+        // 올림 => Math.ceil 
+        console.log(Math.ceil(2.4));
+        console.log(Math.ceil(2.49));
+        console.log(Math.ceil(2.7));
+        
+
+        // 난수 => Math.random  
+        // 0이상 1미만
+        console.log(Math.random());
+        console.log(Math.random());
+        console.log(Math.random());
+        console.log(Math.random());
+
+        */
+
+
+        /*
+        // 가위 바위 보 게임 만들기
+
+        const choices = ["가위", "바위", "보"];
+        const computerChoice = choices[Math.floor(Math.random() * choices.length)];
+
+
+        // 게임플레이어
+        const userChoice = prompt("가위, 바위, 보 중 하나를 입력하세요");
+
+        if (userChoice === computerChoice) {
+            console.log("비겼습니다.");
+        } else if (userChoice === "가위" && computerChoice === "보") {
+            console.log("이겼습니다.");
+        } else if (userChoice === "보" && computerChoice === "바위") {
+            console.log("이겼습니다.");
+        } else {
+            console.log("졌습니다.");
+        }
+        */
+
+        /*
+
+        let str = 'School';
+        console.log(str.length);  // 문자열의 길이를 담을 수 있다.
+
+        // 특정 인덱스의 문자를 받기
+        let str1 = 'School';
+        console.log(str1.charAt(2));
+
+        // 문자열 안에 있는 다른 문자열 검색  => 문자열이 없으면 -1출력, 여러번 포함되어있으면 처음 발견된 인덱스가 리턴
+        let str2 = 'Hello World';
+        console.log(str2.indexOf('e'));
+        console.log(str2.indexOf('z'));
+        console.log(str2.indexOf('ello'));
+        console.log(str2.indexOf('o'));
+
+        // 마지막 인덱스 => lastIndexof() 
+        let str3 = 'Hello World';
+        console.log(str3.indexOf('o'));
+        console.log(str3.lastIndexOf('o'));
+        
+        // 대문자 변환 toUpperCase() 
+        let str4 = 'Hello';
+        console.log(str4.toUpperCase());
+        
+        // 소문자 변환 => toLowerCase() 
+        let str5 = 'Hello';
+        console.log(str5.toLowerCase());
+
+        // 문자열 자르기 => substring() 
+        let str6 = 'Hello World';
+        console.log(str6.substring(2, 5));
+        console.log(str6.substring(2));
+
+        // 시작 지점과 길이로 자르기  ==> 잘안씀 
+        let str7 = 'Hello World';
+        console.log(str7.substr(2, 5));
+
+        //앞뒤의 공백을 없애 주기
+        let str8 = '   Hello World    ';
+        console.log(str8.trim());
+        */
+
+
+        // 배열의 길이
+
+        // let brands = ['애플', '콜라', '스타벅스'];
+        // console.log(brands.length);
+
+        // console.log(brands.indexOf('스타벅스'));
+        // console.log(brands.indexOf('사과'));
+        
+
+        // 배열의 값 추가 하기
+        // let brands = ['애플', '콜라', '스타벅스'];
+        // brands.push('사과');
+        // console.log(brands);
+        // brands.push('삼성', '엘지', '현대');
+        // console.log(brands);
+
+        // 배열의 값 삭제 하기
+        // let brands = ['애플', '콜라', '스타벅스'];
+        // let lastBrand = brands.pop();
+        // console.log(lastBrand);
+        // console.log(brands);
+
+        // 배열에 있는 것을 하나로 합치는 것
+        // let brands = ['Apple', 'Coca-Cola', 'StarBucks'];
+        // console.log(brands.join(' '));
+
+        /* Date */
+        // 객체를 만들어야 한다.
+
+        // let date = new Date();
+
+        // console.log(date.getFullYear());
+        // console.log(date.getMonth());
+        // console.log(date.getDate());
+        // console.log(date.getDay());
+        // console.log(date.getHours());
+        // console.log(date.getMinutes());
+        // console.log(date.getSeconds());
+        // console.log(date.toString());
+        // console.log(date.toLocaleString());
+
+        /*
+        let date = new Date('June 11, 1988 05:25:30');
+        console.log(date.getTime());
+        */
+        // getTime 메서드 1970년 1월 1일 자정부터
+
+        // let date = new Date('June 11, 1988 05:25:30');
+        // console.log(date.getTime() + 'ms');
+        // console.log(date.getTime()/1000 + '초');
+        // console.log(date.getTime()/1000/60 + '분');
+        // console.log(date.getTime()/1000/60/60 + '시간');
+
+        // getMonth() 2가 3월
+        // getDay() 요일을 리턴해 줍니다.  ->  0부터 시작해서 3수요일을 뜻합니다.
+
+
+
+
+        // 1988년 6월 11일 5시 25분 30초
+        // let date1 = new Date('June 11, 1988 05:25:30');
+        // let date2 = new Date('1998-06-11T05:25:30');
+        // let date3 = new Date('1999-12-15');
+        // let date4 = new Date('12/15/1999');
+        // let date5 = new Date('December 15 1999');
+        // let date6 = new Date('Dec 15 1999');
+
+        // console.log(date);
+
+
+
+
+
+        
+
+    </script>
+
+    
+    
+</body>
+</html>

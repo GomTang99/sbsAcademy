@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 03</title>
+    <link rel="stylesheet" href="sendEmail.css">
+</head>
+<body>
+
+
+    <form>
+        <input type="email" id="email_input" placeholder="이메일">
+        <input type="submit" value="Send" id="submit_btn">
+    </form>
+
+
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+
+    <script>
+
+        /*
+        function countCharacter(str, findstr) {
+            let count = 0;
+            // console.log(str.length);
+            for (let i = 0; i < str.length; i++) {
+               // A  E
+               if (str[i].toUpperCase() === findstr.toUpperCase()) {
+                    count++;
+               }
+            }
+            return count;
+        }
+
+        console.log(countCharacter('AbaCedEA', 'E')); //몇번 들어갔는지
+        console.log(countCharacter('AbaCedEA', 'X'));
+
+
+        // function countA(findStr) {
+        //     let count = 0;
+        //     for (let i = 0; i < findStr.length; i++) {
+        //         if (findStr[i].toUpperCase() === 'A') {
+        //             count++;
+        //         }
+        //     }
+        //     return count;
+        // }
+
+        // 함수 재호출
+        function countA(findStr) {
+            return countCharacter(findStr, 'A');
+        }
+
+        console.log(countA('AbaCedEA')); //A가 몇번 들어갔는지
+        */
+
+        //-------------------------------------------------------------------------------
+
+        
+        // 11개의 문자열 있습니다. 생년월일 8자리와 이름이 있습니다.
+        // 이중에서 미성년자만 골라서 출력해주는 프로그램 만들기
+        // 2022년 기준으로 03년생까지 성인, 04년생부터 미성년자
+        
+        // 2017
+
+        /*
+        var birthdayData = ['20050309지수', '19960828제니', '20061112로제', '19960209리사', '20060719안유진', '19981216가을'
+                            , '19971201레이', '20061204장원영', '20061204리즈', '19951218이서', '20080803손예진'];
+
+        
+        function selectAdult(findGirl) {
+            let countPerson = 0;
+            for (let i = 0; i < findGirl.length; i++) {
+                //console.log(findGirl[i]);
+                if (findGirl[i].substring(0, 8) > '2003') {
+                    console.log(findGirl[i].substring(8, 11));
+                    countPerson++;
+                }
+            }
+            return countPerson + '명';
+        }
+
+        console.log(selectAdult(birthdayData));
+        // console.log(birthdayData[0].substring(0,8));
+        // console.log(typeof(birthdayData[0].substring(0,8)));
+        */
+
+        //-------------------------------------------------------------------------------
+
+        // 강사님풀이 (substr 사용)
+
+        /*
+        function printGril(arr) {
+            console.log('미성년자 명단');
+            for (let i = 0; i < arr.length; i++) {
+                if (Number(arr[i].substr(0, 4)) > 2005) {
+                    console.log(arr[i]);
+                }
+            }
+        }
+
+        printGril(birthdayData);
+        */
+
+        //-------------------------------------------------------------------------------
+
+        // innovation214@naver.com
+        // 1. 이메일에는 @가 포함되어 있어야 한다.
+        // 2. @뒤에는 최소 1개이상의 .이 포함되어 있어야 한다.
+
+        $('#email_input').on('input', email);
+
+        function email() {
+            let emailCheck = $('#email_input').val();
+
+            if (emailCheck === '@' || emailCheck === '.') {
+                $('#submit_btn').css('color', 'black');
+                $('#submit_btn').css('background-color', 'white');
+            } else {
+                $('#submit_btn').css('color', 'white');
+                $('#submit_btn').css('background-color', 'lightgray');
+            }
+        }
+        
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D-day 계산기</title>
+    <!-- <link rel="stylesheet" href="style.css">  -->
+    <link rel="stylesheet" href="style1.css">  <!--강사님풀이-->
+</head>
+<body>
+
+    <!-- <div class="wrap">
+        <header>
+            <h1>
+                <a href="#">
+                    <img src="/day02/img/logo.png">
+                </a>
+            </h1>
+        </header>
+
+        <div class="content">
+            <div class="coupleDate">
+                <h2>만난지 <span id="calcdate">00</span>일째</h2>
+                <img src="/day02/img/female.png">
+                <figure>
+                    <img src="/day02/img/dot.png">
+                    <img src="/day02/img/dot.png">
+                    <img src="/day02/img/heart.png">
+                    <img src="/day02/img/dot.png">
+                    <img src="/day02/img/dot.png">
+                </figure>
+                <img src="/day02/img/male.png">
+            </div>
+            <form>
+                <h2>시작일 </h2>
+                <input type="date" class="date">
+                <input type="submit" class="calc" value="계산하기">
+            </form>            
+        </div>
+        
+    </div> -->
+
+    <!-- 강사님 마크업 -->
+    <div class="navbar">
+        <img src="img/logo.png" id="logo" width="157">
+    </div>
+    <div class="main">
+        <div class="container">
+            <h2>만난지 <span id="day_count">00</span> 일째</h2>
+
+            <div class="img_row">
+                <img src="img/female.png" width="148">
+                <img src="img/dot.png" width="8">
+                <img src="img/dot.png" width="8">
+                <img src="img/heart.png" width="16">
+                <img src="img/dot.png" width="8">
+                <img src="img/dot.png" width="8">
+                <img src="img/male.png" width="148">
+            </div>
+
+            <div class="date_row">
+                <label for="start">시작일</label>
+                <input type="date" name="start" id="start">
+            </div>
+            <button id="calcdate">결과 확인</button>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    
+    <script>
+        $('#calcdate').on('click', calculateDate);
+
+        function calculateDate() {
+            let now = new Date();
+            console.log(now);
+
+            let dday = new Date(document.getElementById('start').value);
+            console.log(dday);
+
+            let passedDay = (now.getTime() - dday.getTime()/ 24*60*60*1000);
+            console.log(passedDay);
+
+            $('#day_count').text(Math.floor(passedDay) + 1);
+
+            if ($('#start').val() === '') {
+                alert('날짜를 입력해주세요');
+            } 
+            
+
+        }
+        
+       
+
+
+
+    </script>
+
+
+</body>
+</html>

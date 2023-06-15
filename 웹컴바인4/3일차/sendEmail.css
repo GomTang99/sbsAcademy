@@ -1,0 +1,31 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    min-width: 992px;
+}
+
+form{
+    width: 50%;
+    height: 800px;
+    background-color: lightblue;
+    margin: 300px auto;
+    text-align: center;
+}
+
+#email_input{
+    width: 40%;
+    font-size: 30px;
+    margin-top: 25%;
+}
+
+#submit_btn{
+    width: 10%;
+    font-size: 30px;
+    border: none;
+    background-color: white;
+    border-radius: 25px;
+    cursor: pointer;
+}

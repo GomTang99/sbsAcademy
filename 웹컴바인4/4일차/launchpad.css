@@ -1,0 +1,32 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    min-width: 992px;
+}
+
+img{
+    display: block;
+}
+
+.wrap{
+    width: 100%;
+}
+
+.pad{
+    margin: 20px auto;
+}
+
+.wrap .play{
+    position: absolute;
+    right: 25%;
+    top: 15%;
+}
+
+.wrap .stop{
+    position: absolute;
+    right: 25%;
+    top: 30%;
+}

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day08</title>
+</head>
+<body>
+    
+    <!-- <h1 id="title">DOM(Document Obejct Model)</h1>
+    <h2 id="sub-title">문서 객체 모델</h2> -->
+    
+    <div id="content">
+        <h2 id="title-1">과일-1</h2>
+        <ul id="list-1">
+            <li>사과</li>
+            <li>배</li>
+            <li>한라봉</li>
+            <li>키위</li>
+            <li>토마토</li>
+            <li>딸기</li>
+            <li>대추</li>
+            <li>감</li>
+        </ul>
+        <h2 id="title-2">과일-2</h2>
+        <ul id="list-2">
+            <li>감귤</li>
+            <li>참다래</li>
+            <li>매실</li>
+            <li>수박</li>
+            <li>참외</li>
+            <li>블루베리</li>
+            <li>체리</li>
+            <li>바나나</li>
+        </ul>
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <script>
+        /*
+        let title = document.querySelector('#title');
+        title.style.color = 'red';
+
+
+        let str = 'Hello';
+        let num = 123;
+        let bool = true;
+        let arr = [1, 2, 3];
+        let obj = {
+            name : 'Hello',
+            email : 'hello@naver.com'
+        }
+
+        function func() {
+            console.log('I Love Hello');
+        }
+        */
+
+        /*
+        console.log('------------------str------------------');
+        console.log(str);
+        console.dir(str);
+        console.log('------------------num------------------');
+        console.log(num);
+        console.dir(num);
+        console.log('------------------bool------------------');
+        console.log(bool);
+        console.dir(bool);
+        console.log('------------------arr------------------');
+        console.log(arr);
+        console.dir(arr);
+        console.log('------------------obj------------------');
+        console.log(obj);
+        console.dir(obj);
+        console.log('------------------func------------------');
+        console.log(func);
+        console.dir(func);
+        
+        console.log(str, num, bool, arr, obj, func);
+        console.dir(str, num, bool, arr, obj, func);
+        */
+
+        //--------------------------------------------------------------------------------------
+
+        const myTag = document.querySelector('#content');
+        console.log(myTag);
+
+        console.log(myTag.children);
+        console.log(myTag.children[2]);
+        
+        console.log(myTag.firstElementChild);
+        console.log(myTag.lastElementChild);
+        
+
+
+    </script>
+    
+</body>
+</html>
+
+<!-- 
+    자바스크립트는 모든 것이 객체다.
+    Window 객체를 우리는 전역객체(Global Object)
+    
+
+    DOM
+    Document Object Model (진입점 역할을 합니다.)
+
+    dir 메소드는 문자열 표시 형식으로 표시 됩니다.
+
+
+
+
+
+
+
+
+
+ -->

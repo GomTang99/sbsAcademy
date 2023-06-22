@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day04</title>
+    <link rel="stylesheet" href="#">
+</head>
+<body>
+
+    <!-- 키값 받아와서 출력 -->
+    <input type="text" id="input">
+
+
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+
+    <script>
+
+        const myInput = document.querySelector('#input');
+        myInput.addEventListener('keydown', onkeydown);
+
+        function onkeydown(e) {
+            console.log(`입력된값 : ${e.key}`);
+            console.log(`입력된값 : ${e.keyCode}`);
+        }
+        
+    </script>
+
+
+    
+</body>
+</html>
+
+<!-- 
+
+    src : 재생할 음원 파일의 경로를 설정 (mp3, wav, ogg, ...)
+    autoplay : 자동 재생 여부 설정(브라우저에서 html 파일이 로드 되자마자 음악파일이 재생됩니다.)
+    loop : 반복 재생 여부 설정
+    controls : 컨트롤 판넬 노출
+    muted : 음소거 설정
+
+    생성, 재생, 정지
+    Audio 객체 이벤트 종류
+
+    canplaythrough : 음원 파일이 모드 로드되어서 재생 가능할 때
+    play : 재생이 시작될 때
+    playing : 재생 중일 때
+    pause : 일시정지 되었을 때
+    ended : 재생이 완료되었을 때
+    volumechange : 볼륨이 변경될 때
+    
+    Audio 객체의 메소드와 프로퍼티
+    play() : 재생
+    pause : 일시정지
+    addTextTrack() : 새로운 트랙을 추가
+    canPlayType() : 브라우저가 해당 오디오 타입을 재생할 수 있는지 체크
+    load() : 오디오 객체를 리로드
+
+    // 프로퍼티
+    src : 파일 경로
+    volume : 볼륨
+    loop : 반복 여부 true, false
+    autoplay : 자동재생 true, false
+    muted : 음소거 여부 true, false
+    paused : 일시정지 여부 true, false
+    ended : 재생완료 여부 true, false
+    duration : 음원의 전체 길이 (초 단위)
+    currentTime : 음원의 현재 재생 위치  (초 단위)
+
+
+    // 키보드 이벤트
+    
+    keydown : 키보드 버튼을 누르는 순간 
+    keypress : 키보드 버튼을 누르는 순간
+    keyup : 키보드 버튼을 눌렀다 떼는 순간 발생
+
+    
+    // 프로퍼티
+    KeyboardEvent.key : 이벤트가 발생한 버튼의 값
+    KeyboardEvent.code : 이벤트가 발생한 버튼의 키보드에서 물리적인 위치
+
+    !!주의할 점!!
+    keypress는 알파벳이나 숫자, 스페이스바 띄워쓰기 하는것과 같이 출력값이 변하는 키에서는 이벤트가 발생하고,
+    esc, shift 처럼 기능적인 역할을 하는 키들은 이벤트가 발생하지 않습니다.
+
+    출력이 가능한 키이지만 영어가 아닌 경우에는 반응하지 않습니다.
+
+ -->

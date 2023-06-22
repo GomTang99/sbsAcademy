@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>LunchPad</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+  <div class="pad">
+    <img src="img/pad.png" width="700" height="570">
+    <button id="play-btn">
+      <img src="img/play.png" width="50" height="50">
+    </button>
+    <button id="stop-btn">
+      <img src="img/stop.png" width="50" height="50">
+    </button>
+
+    <div class="cell-container">
+      <div class="cell green" id="cell1">
+        <div class="key">1</div>
+        <div class="instrument">Bass<br>KickDrum</div>
+      </div>
+
+      <div class="cell blue" id="cell2">
+        <div class="key">2</div>
+        <div class="instrument">Closed<br>Hi-hat</div>
+      </div>
+
+      <div class="cell blue" id="cell3">
+        <div class="key">3</div>
+        <div class="instrument">Open<br>Hi-hat</div>
+      </div>
+
+      <div class="cell red" id="cell4">
+        <div class="key">4</div>
+        <div class="instrument">Clap</div>
+      </div>
+
+      <div class="cell red" id="cell5">
+        <div class="key">5</div>
+        <div class="instrument">Snap</div>
+      </div>
+
+      <div class="cell blue" id="cell6">
+        <div class="key">6</div>
+        <div class="instrument">Crash<br>cymbal</div>
+      </div>
+
+      <div class="cell green" id="cell7">
+        <div class="key">7</div>
+        <div class="instrument">Mid<br>Tom</div>
+      </div>
+
+      <div class="cell green" id="cell8">
+        <div class="key">8</div>
+        <div class="instrument">Hi<br>Tom</div>
+      </div>
+
+      <div class="cell blue" id="cell9">
+        <div class="key">9</div>
+        <div class="instrument">Tambourine</div>
+      </div>
+    </div>
+  </div>
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <script>
+      let music = new Audio('audio/AlanWalker-TheDrum.mp3');
+
+      $('#play-btn').on('click', function () {
+          music.play();
+      });
+
+      $('#stop-btn').on('click', function () {
+          music.paused();
+          music.currentTime = 0;          
+      });
+
+      let KickDrum = new Audio('audio/01_kick_drum.wav');
+      let clap = new Audio('audio/04_clap.wav');
+
+      $(document).on('keydown', function (e) {
+          // console.log(e.key);
+          // console.log($('#cell' + e.key));
+          $('#cell' + e.key).addClass('playing');
+      });
+
+      $(document).on('keyup', function (e) {
+          $('.cell').removeClass('playing');
+      });
+
+
+    </script>
+
+
+  </body>
+</html>

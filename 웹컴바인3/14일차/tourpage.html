@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/15일차/style.css">
+    <title>여행 사이트</title>
+</head>
+<body>
+    
+    <img id="logo" src="img/logo.png" width="165" height="100">
+
+    <div id="menu">
+        <a id="home" onclick="changeHome()">Home</a>
+        <a id="seoul" onclick="changeSeoul()">Seoul</a>
+        <a id="tokyo" onclick="changeTokyo()">Tokyo</a>
+        <a id="paris" onclick="chageParis()">Paris</a>
+    </div>
+
+    <img id="photo" src="img/home.png" width="90%">
+
+    <script>
+        
+        function changeHome() {
+            document.getElementById('photo').src = 'img/home.png'
+            document.getElementById('home').style.fontWeight = 'bold'
+            document.getElementById('seoul').style.fontWeight = 'normal'
+            document.getElementById('tokyo').style.fontWeight = 'normal'
+            document.getElementById('paris').style.fontWeight = 'normal'
+        }
+
+        function changeSeoul() {
+            document.getElementById('photo').src = 'img/seoul.png'
+            document.getElementById('home').style.fontWeight = 'normal'
+            document.getElementById('seoul').style.fontWeight = 'bold'
+            document.getElementById('tokyo').style.fontWeight = 'normal'
+            document.getElementById('paris').style.fontWeight = 'normal'
+        }
+
+        function changeTokyo() {
+            document.getElementById('photo').src = 'img/tokyo.png'
+            document.getElementById('home').style.fontWeight = 'normal'
+            document.getElementById('seoul').style.fontWeight = 'normal'
+            document.getElementById('tokyo').style.fontWeight = 'bold'
+            document.getElementById('paris').style.fontWeight = 'normal'
+        }
+
+        function chageParis() {
+            document.getElementById('photo').src = 'img/paris.png'
+            document.getElementById('home').style.fontWeight = 'normal'
+            document.getElementById('seoul').style.fontWeight = 'normal'
+            document.getElementById('tokyo').style.fontWeight = 'normal'
+            document.getElementById('paris').style.fontWeight = 'bold'
+        }
+
+    </script>
+
+</body>
+</html>

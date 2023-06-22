@@ -1,0 +1,26 @@
+#logo {
+    display: block;
+    margin: 80px auto 0;
+}
+
+#menu {
+    text-align: center;
+    margin: 60px 0;
+}
+
+#menu a{
+    margin: 0 10px 0;
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#home {
+    font-weight: bold;
+}
+
+#photo {
+    display: block;
+    margin: 0 auto;
+}

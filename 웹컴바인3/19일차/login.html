@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 19</title>
+    <link rel="stylesheet" href="./css/login.css">
+</head>
+<body>
+
+    <div class="login_wrap">
+        <!-- form 태그 -> http프로토콜로 서버에 통째로 전달하기위해서 사용 -->
+        <form class="login_form"> 
+            <input type="text" id="id" placeholder="아이디">
+            <input type="password" id="password" placeholder="비밀번호">
+            <input type="submit" id="login_btn" value="로그인">
+            <a href="#" id="pw_find">비밀번호를 잊어버리셨나요?</a>
+        </form>
+    </div>
+
+    <!-- 강사님풀이 (html)-->
+    <!--
+    <div class="login_form">
+        <form>
+            <input type="text" placeholder="아이디" name="email" id="email_input" class="text_filed">
+            <input type="text" placeholder="비밀번호" name="password" id="password_input" class="text_filed">
+            <input type="submit" value="로그인" class="submit-btn">
+        </form>
+
+        <div class="links">
+            <a href="#">비밀번호를 잊어버리셨나요?</a>
+        </div>
+    </div>
+    -->
+
+    <!-- 제이쿼리 -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+
+    <script>
+        
+        // 아이디, 비밀번호 입력시 로그인버튼 활성화
+        $('#id').on('input', loginInput);
+        $('#password').on('input', loginInput);
+
+        function loginInput() {
+            let idCheck = $('#id').val();
+            let pwCheck = $('#password').val();
+            
+            // id의 value값이 없거나 pw의 value값이 없을떄 원래상태 아니면 로그인 버튼 활성화
+            if(idCheck == '' || pwCheck == '') {
+                $('#login_btn').css('color', 'black');
+                $('#login_btn').css('background-color', 'gray');
+            } else {
+                $('#login_btn').css('color', 'white');
+                $('#login_btn').css('background-color', 'lightblue');
+            }
+        }
+
+        // 강사님 풀이
+         
+        // $('#email_input').on('input', checkInput);
+        // $('#password_input').on('input', checkInput);
+        
+        // function checkInput() {
+        //     let email = $('#email_input').val();
+        //     let password = $('#password_input').val();
+
+        //     if(email == '' || password == '') {
+        //         $('.submit_btn').css('background-color', 'gray');
+        //     } else {
+        //         $('.submit_btn').css('background-color', 'lightblue');
+        //     }
+        // }
+
+
+    </script>
+    
+</body>
+</html>

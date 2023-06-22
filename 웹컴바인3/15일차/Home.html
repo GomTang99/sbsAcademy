@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>여행 사이트</title>
+</head>
+<body>
+
+    <img id="logo" src="img/logo.png" width="165" height="100">
+
+    <div id="menu">
+
+        <!-- 태그에 바로 적용 (이미지 변경)-->
+        
+        <!-- <a onclick="document.getElementById('photo').src = 'img/home.png'"><b>Home</b></a>
+        <a onclick="document.getElementById('photo').src = 'img/seoul.png'">Seoul</a>
+        <a onclick="document.getElementById('photo').src = 'img/tokyo.png'">Tokyo</a>
+        <a onclick="document.getElementById('photo').src = 'img/paris.png'">Paris</a> -->
+
+        <!-- 함수적용 (이미지 변경, 볼드 처리)-->
+        <a id="home" onclick="homeclick()">Home</a>
+        <a id="seoul" onclick="seoulclick()">Seoul</a>
+        <a id="tokyo" onclick="tokyoclick()">Tokyo</a>
+        <a id="paris" onclick="parisclick()">Paris</a>
+    </div>
+    
+    <!-- <button onclick="myFunction()">클릭</button>
+    <div onclick="style.backgroundColor='yellow'">노란색으로 바꿔주세요</div> -->
+    
+    <img id="photo" src="img/home.png" width="90%">
+    
+
+    <script>
+    
+    //home 함수
+    function homeclick() {
+        document.getElementById('photo').src = 'img/home.png';
+        document.getElementById('home').style.fontWeight = 'bold';
+        document.getElementById('seoul').style.fontWeight = 'normal';
+        document.getElementById('tokyo').style.fontWeight = 'normal';
+        document.getElementById('paris').style.fontWeight = 'normal';
+
+    }
+
+    //seoul 함수
+    function seoulclick() {
+        document.getElementById('photo').src = 'img/seoul.png';
+        document.getElementById('seoul').style.fontWeight = 'bold';
+        document.getElementById('home').style.fontWeight = 'normal';
+        document.getElementById('tokyo').style.fontWeight = 'normal';
+        document.getElementById('paris').style.fontWeight = 'normal';
+    }
+
+    //tokyo 함수
+    function tokyoclick() {
+        document.getElementById('photo').src = 'img/tokyo.png';
+        document.getElementById('tokyo').style.fontWeight = 'bold';
+        document.getElementById('seoul').style.fontWeight = 'normal';
+        document.getElementById('home').style.fontWeight = 'normal';
+        document.getElementById('paris').style.fontWeight = 'normal';
+    }
+
+    //seoul 함수
+    function parisclick() {
+        document.getElementById('photo').src = 'img/paris.png';
+        document.getElementById('paris').style.fontWeight = 'bold';
+        document.getElementById('seoul').style.fontWeight = 'normal';
+        document.getElementById('tokyo').style.fontWeight = 'normal';
+        document.getElementById('home').style.fontWeight = 'normal';
+    }
+
+
+    </script>
+
+</body>
+</html>

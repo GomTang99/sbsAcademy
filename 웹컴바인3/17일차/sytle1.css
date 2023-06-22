@@ -1,0 +1,36 @@
+#myNumber{
+    font-size: 140px;
+}
+
+.btnColor{
+    width: 30px;
+    height: 30px;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.red{
+    background-color: red;
+}
+.orange{
+    background-color: orange;
+}
+.yellow{
+    background-color: yellow;
+}
+.green{
+    background-color: green;
+}
+.blue{
+    background-color: blue;
+}
+.navy{
+    background-color: navy;
+}
+.purple{
+    background-color: purple;
+}
+.black{
+    background-color: black;
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 09</title>
+</head>
+<body>
+
+    <h2>진행 과정</h2>
+    <ul id="doing-list">
+        <li>인터렉티브 자바스크립트</li>
+        <li>프로그래밍 언어</li>
+        <li>프로그래머의 세계</li>
+        <li>소프트웨어 이해하기</li>
+    </ul>
+    
+    <h2>완료 과정</h2>
+    <ul id="done-list">
+        <li>프로그래밍 시작하기</li>
+        <li>프로그래밍 핵심개념</li>
+        <li>프로그래밍과 데이터</li>
+        <li>HTML/CSS 시작</li>
+        <li>HTML/CSS 핵심</li>
+        <li>반응형 웹퍼블리싱</li>
+    </ul>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <script>
+
+    let stand = document.querySelector('body');
+
+    // 인터렉트 자바스크립트 찾는 방법
+    /*
+    console.log(stand.children[1].firstElementChild);
+    console.log(stand.children[1].children[0]);
+    console.log(stand.children[1].children[0].nextElementSibling.previousElementSibling);
+    console.log(stand.children[2].previousElementSibling.children[0]);
+    console.log(stand.firstElementChild.nextElementSibling.children[0]);
+    */
+
+
+    let doingList = document.querySelector('#doing-list');
+    // let doneList = document.querySelector('#done-list');
+
+    // 소프트웨어 이해하기 찾는방법
+    
+    console.log(doingList.children[3]);
+    console.log(doingList.lastElementChild);
+    console.log(doingList.children[2].nextElementSibling);
+
+
+
+
+    </script>
+    
+</body>
+</html>
+
+<!-- 
+    let stand = document.querySelector('body');
+
+
+
+ -->

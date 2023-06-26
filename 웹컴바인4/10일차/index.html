@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day10</title>
+</head>
+<body>
+
+    <h1>오늘 생활 계획표</h1>
+    <ol id="today">
+        <li>친구와 게임하기</li>
+        <li>쇼핑 하러 가기</li>
+        <li>맛있는 저녁 만들어 먹기</li>
+    </ol>
+
+    <h1>내일 생활 계획표</h1>
+    <ol id="tomorrow">
+        <li>놀이동산 가기</li>
+        <li>독서 하기</li>
+        <li>청소 하기</li>
+    </ol>
+    
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <script>
+
+        /*
+        let today = document.querySelector('#today');
+
+        // 처음 삽입
+        today.innerHTML = '<li>처음</li>' + today.innerHTML;
+        // 마지막 삽입
+        today.innerHTML = today.innerHTML + '<li>마지막</li>';
+
+        // 요소의 바깥쪽에 삽입(이전)
+        today.outerHTML = '<p>이전</p>' + today.outerHTML;
+
+        let newToday = document.querySelector('#today');
+
+        newToday.outerHTML = newToday.outerHTML + '<p>마지막</p>';
+        */
+
+        // ----------------------------------------------------------------------------------
+
+        /*  
+
+        prepend, append
+
+        // 요소 노드 생성
+        let tomorrow = document.querySelector('#tomorrow');
+        let first = document.createElement('li');
+        first.textContent = '처음';
+        // 요소 노드 추가
+        tomorrow.prepend(first);
+
+        let last = document.createElement('li');
+        last.textContent = '마지막';
+        tomorrow.append(last);
+        */
+
+        // ----------------------------------------------------------------------------------
+
+        // before, after
+
+        let today = document.querySelector('#today');
+        let start = document.createElement('p');
+        start.textContent = '시작';
+        today.before(start);
+
+        let end = document.createElement('p');
+        end.textContent = '끝';
+        today.after(end);
+
+        // ----------------------------------------------------------------------------------
+
+        // before, after 와 prepend, append의 차이점
+        // 
+        
+
+
+
+    </script>
+    
+</body>
+</html>
+
+<!-- 
+    요소를 넣는 방법 3단계
+    1. 요소 노드를 만든다.  createElement('태그이름')
+    2. 요소 노드를 꾸며서
+    3. 요소 노드를 추가하면 됩니다. 
+    
+    prepend 메소드를 호출한 제일 첫번째 노드로 
+
+    append 메소드를 호출한 제일 마지막 노드로
+    
+ -->

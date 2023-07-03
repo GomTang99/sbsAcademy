@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="day13.css">
+    <title>Day13(카카오톡 클론)</title>
+</head>
+<body>
+    
+    <div class="wrap">
+        <div class="chat_container">
+            <div class="circle_btn">
+                <button id="red_btn" class="red btn"></button>
+                <button id="yellow_btn" class="yellow btn"></button>
+                <button id="green_btn" class="green btn"></button>
+            </div>
+            
+            <div class="opponent_info">
+                <img src="img/iu.jpg" alt="iu" width="60px">
+                <p>여자친구</p>
+            </div>
+            
+            <div class="chat_content">
+                <ul class="opponent_text" id="opponenttext">
+                </ul>
+            </div>
+
+            <div class="chat_text">
+                <input type="text" id="text_input" class="text_content" placeholder="대화내용이 들어갑니다.">
+                <button id="send" class="send_text">전송</button>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- 제이쿼리 -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <script>
+
+        // 상대방 채팅
+
+        let opponent_text = document.querySelector('#opponenttext')
+
+        function opponenttext(str) {
+            const li = document.createElement('li');
+            li.textContent = str;
+            opponent_text.append(li);
+        }
+
+        opponenttext('안녕');
+
+        // 내 화면 채팅
+        
+        $('#text_input').on('keypress', sendMessage);
+        
+        // input 내용 불러오기
+
+        function sendMessage(e) {
+            let input_text = document.querySelector('#text_input');
+            // console.log(input_text.value);
+            const li = document.createElement('li');
+            li.textContent = input_text.value;
+            // let my_text = opponent_text.classList.add('my_li')
+            opponent_text.append(li);
+        }
+        
+        
+
+
+    </script>
+
+
+</body>
+</html>

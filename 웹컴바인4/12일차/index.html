@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/flaggame.css">
+    <title>Day 12(청기 백기)</title>
+</head>
+<body>
+
+    <div class="container">
+        <img src="img/blue_dot.png" alt="blue_dot" class="flag blue dot">
+        <img src="img/red_dot.png" alt="red_dot" class="flag red dot">
+        <img src="img/blue_solid.png" alt="blue_solid" class="flag blue solid">
+        <img src="img/blue_dot.png" alt="blue_solid" class="flag blue dot">
+        <img src="img/white_dot.png" alt="white_solid" class="flag white dot">
+        <img src="img/blue_solid.png" alt="blue_dot" class="flag blue solid">
+    </div>
+
+    <div class="btn-container">
+        <button id="blue-flag-down" class="flag-btn">청기 내려</button>
+        <button id="white-flag-down" class="flag-btn">청기 내리지말고 백기 내려</button>
+        <button id="blue-dot-flag-down" class="flag-btn">점선 청기 내려</button>
+    </div>
+
+
+
+
+    <!-- 제이쿼리 -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <script>
+
+        $('#blue-flag-down').on('click', blueDown);
+        $('#white-flag-down').on('click', whiteDown);
+        $('#blue-dot-flag-down').on('click', blueDotDown);
+
+        function blueDown(e) {
+            $('.blue').addClass('flag-down');
+            setTimeout(reset, 1000);
+        }
+
+        function whiteDown(e) {
+            $('.white').addClass('flag-down');
+            setTimeout(reset, 1000);
+        }
+
+        function blueDotDown(e) {
+            $('.blue.dot').addClass('flag-down');
+            setTimeout(reset, 1000);
+        }
+
+        function reset() {
+            $('.flag').removeClass('flag-down');
+        }
+        
+
+
+    </script>
+    
+</body>
+</html>

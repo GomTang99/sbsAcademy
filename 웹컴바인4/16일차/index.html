@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="sytle.css">
+    <title>Day16</title>
+</head>
+<body>
+
+    <div class="wrap">
+        <div class="header">
+            <img src="img/logo.png" alt="logo">
+            <ul class="menu_bar">
+                <li>SHOP</li>
+                <li>CART</li>
+                <li>LOGIN</li>
+            </ul>
+        </div>
+        <div class="main">
+            <div class="content">
+                <h1>코리아 페스타 <br> 슈퍼 세일</h1>
+                <p>최대 50% 할인의 혜택을 받아보세요!</p>
+                <button id="btn-coupon" class="btn">쿠폰 받기</button>
+            </div>
+        </div>
+        <div class="coupon_window" id="window_coupon">
+            <h2>쿠폰이 발급되었습니다.</h2>
+            <button id="btn_check" class="btn1">완료</button>
+        </div>
+        <div class="dim" id="dim">
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+    <!-- 제이쿼리 -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <script>
+
+        // 
+        $('#btn-coupon').on('click', getCoupon);
+        $('#btn_check').on('click', getOut);
+        $(document).on('keydown', getOut);
+        
+
+        function getCoupon(e) {
+            $('#dim').css('opacity', '1');
+            $('#dim').css('z-index', '2');
+            $('#window_coupon').css('opacity', '1');
+            $('#window_coupon').css('z-index', '4');
+        }
+
+        function getOut(e) {
+            if (e.type === 'click' || e.key === 'Escape') {
+                $('#dim').css('opacity', '0');
+                $('#dim').css('z-index', '-1');
+                $('#window_coupon').css('opacity', '0');
+            }
+        }
+
+    </script>
+
+
+    
+</body>
+</html>

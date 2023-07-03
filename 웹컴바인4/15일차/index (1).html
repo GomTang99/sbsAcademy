@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Travel Website(15일차 소스코드)</title>
+  <meta charset="utf-8">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+  <img id="logo" src="images/logo.png" width="165" height="58">
+  <div id="menu">
+    <a id="home">Home</a>
+    <a id="seoul">Seoul</a>
+    <a id="tokyo">Tokyo</a>
+    <a id="paris">Paris</a>
+  </div>
+  <img id="photo" src="images/home.png" width="90%">
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+      /*
+      $('#home').on('click', clickHome);
+      $('#seoul').on('click', clickSeoul);
+      $('#tokyo').on('click', clickTokyo);
+      $('#paris').on('click', clickParis);
+      */
+
+      $('#menu a').on('click', selectMenu);
+      $(document).on('keydown', selectMenu);
+      $('#photo').on('mouseenter', mouseEnterPhoto)
+      $('#photo').on('mouseleave', mouseLeavePhoto)
+
+      function selectMenu(e) {
+        // console.log(e);
+        // console.log(e.currentTarget.id);
+        let targetId = '';
+        if (e.type === 'click') {
+          targetId = e.currentTarget.id;
+        } else if (e.type === 'keydown') {
+          if (e.key === '1') {
+            targetId = 'home';
+          } else if (e.key === '2') {
+            targetId = 'seoul';
+          } else if (e.key === '3') {
+            targetId = 'tokyo';
+          } else if (e.key === '4') {
+            targetId = 'paris';
+          }
+        }
+
+        $('#photo').attr('src', 'images/'+ targetId +'.png');
+        $('#menu a').css('font-weight', 'normal');
+        $('#' + targetId).css('font-weight', 'bold');
+      }
+    
+      /*
+    function clickHome() {
+      $('#photo').attr('src', 'images/home.png');
+      $('#home').css('font-weight','bold');
+      $('a').not('#home').css('font-weight','normal');
+    }
+    
+    function clickSeoul() {
+      $('#photo').attr('src', 'images/seoul.png');
+      $('#seoul').css('font-weight','bold');
+      $('a').not('#seoul').css('font-weight','normal');
+    }
+
+    function clickTokyo() {
+      $('#photo').attr('src', 'images/tokyo.png');
+      $('#tokyo').css('font-weight','bold');
+      $('a').not('#tokyo').css('font-weight','normal');
+    }
+
+    function clickParis() {
+      $('#photo').attr('src', 'images/paris.png');
+      $('#paris').css('font-weight','bold');
+      $('a').not('#paris').css('font-weight','normal');
+    }
+      */
+
+    function mouseEnterPhoto() {
+      $('#photo').css('box-shadow', '5px 10px');
+    }
+
+    function mouseLeavePhoto() {
+      $('#photo').css('box-shadow', 'none');
+    }
+    
+/*
+    function processKeyEvent(event) {
+      if (event['key'] === '1') {
+        clickHome();
+      }
+      else if (event['key'] === '2') {
+        clickSeoul();
+      }
+      else if (event['key'] === '3') {
+        clickTokyo();
+      }
+      else if (event['key'] === '4') {
+        clickParis();
+      }
+    }
+*/    
+   </script>
+</body>
+</html>

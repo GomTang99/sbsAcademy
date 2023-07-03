@@ -1,0 +1,110 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+li{
+    max-width: 430px;
+    width: 100%;
+    list-style: none;
+    background-color: white;
+    border-radius: 25px;
+    padding-left: 10px;
+    margin-top: 10px;
+}
+
+.my_li{
+    max-width: 430px;
+    width: 100%;
+    list-style: none;
+    background-color: yellow;
+    border-radius: 25px;
+    padding-left: 10px;
+    margin-top: 10px;
+    text-align: right;
+}
+
+.wrap{
+    width: 100%;
+    height: 1000px;
+    background-image: url('img/background.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.chat_container{
+    width: 70%;
+    height: 600px;
+    margin: 50px auto;
+    box-shadow: 3px 3px 3px 3px gray;
+}
+
+.btn{
+    width: 20px;
+    height: 20px;
+    border-radius: 25px;
+    border: none;
+    margin-top: 10px;
+    margin-left: 5px;
+}
+
+.btn:first-child{
+    background-color: red;
+}
+
+.btn:nth-child(2){
+    background-color: gold;
+}
+
+.btn:last-child{
+    background-color: greenyellow;
+}
+
+.opponent_info{
+    display: flex;
+    width: 50%;
+}
+
+.opponent_info > img{
+    height: 60px;
+    border-radius: 50%;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.opponent_info > p{
+    line-height: 80px;
+    font-weight: bold;
+}
+
+.chat_content{
+    width: 100%;
+    height: 400px;
+    background-color: lightsteelblue;
+    padding: 10px;
+    overflow-y: scroll;
+}
+
+.chat_text{
+    width: 100%;
+    height: 100px;
+}
+
+.chat_text > .text_content{
+    margin: 10px;
+    margin-right: 5px;
+    width: 80%;
+    height: 70px;
+}
+
+.chat_text > .send_text{
+    width: 13%;
+    height: 70px;
+    background-color: dodgerblue;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 15(요소 더 선택하기)</title>
+
+    <style>
+
+        .box{
+            display: flex;
+            flex-wrap: wrap;
+            margin: 20px auto;
+            max-width: 23rem;
+            border: 2px solid #f6774f;
+        }
+
+        button{
+            border: none;
+            color: white;
+            margin: 1rem;
+            width: 150px;
+            height: 40px;
+        }
+
+        .color-1{
+            background-color: #426fc5;
+        }
+
+        .color-2{
+            background-color: #00897b;
+        }
+        .color-3{
+            background-color: #f6774f;
+        }
+        .color-4{
+            background-color: #e94043;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="box" id="box-1">
+        <button class="color-1"></button>
+        <button class="color-2"></button>
+        <button class="color-3"></button>
+        <button class="color-4"></button>
+    </div>
+    <div class="box" id="box-2">
+        <button class="color-1"></button>
+        <button class="color-2"></button>
+        <button class="color-3"></button>
+        <button class="color-4"></button>
+    </div>
+
+
+
+
+
+
+
+
+
+    <!-- 제이쿼리 -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <script>
+
+        // 요소 더 선택하기
+
+        // filter 더많은 요소를 선택할때 사용
+
+        // $('button').filter('.color-3').text('선택됨');
+        // $('#box-1 button').text('SELECTED');
+        // $('#box-2 button').filter('.color-3').text('SELECTED');
+        
+        // --------------------------------------------------------------------------
+
+        // NOT 
+        // $('button').not('.color-3').text('SELECTED');
+
+        // --------------------------------------------------------------------------
+
+        // EQ (요소 선택 0부터시작)
+        // $('button').eq(1).text('SELECTED');
+
+        // --------------------------------------------------------------------------
+
+        // PARENT (부모)
+        // $('#box-1').parent().css('background-color','black');
+        // $('#box-1 .color-1').parent().css('background-color','black');
+        // $('#box-2 .color-1').parent().css('background-color','black');
+
+        // --------------------------------------------------------------------------
+
+        // children (자식)
+        // $('#box-1').children().css('background-color','black');
+
+        // --------------------------------------------------------------------------
+
+        // find (선택된 요소에 자녀)
+        // $('#box-1').find('.color-2').css('background-color','black');
+
+        // --------------------------------------------------------------------------
+
+        // silblings ()
+        // $('#box-1 .color-2').siblings().text('SELECTED');
+        // $('#box-2 .color-3').siblings('.color-4').text('SELECTED');
+
+        // --------------------------------------------------------------------------
+
+        /*
+        function KeyboardInput(e) {
+            console.log(e.key);
+        }
+
+        $(document).on('keydown', KeyboardInput);
+        */
+
+
+
+
+    </script>
+    
+</body>
+</html>
+
+<!-- NOT -->
+<!-- EQ 선택된 요소들 중에서 N번째 요소 하나만 골라냄 -->
+<!-- PARENT 부모 요소를 찾아줍니다. -->
+<!-- FIND -->
+<!-- SIBLINGS -->
+
+<!-- 
+    fadeOut
+    fadeIn    
+ -->
